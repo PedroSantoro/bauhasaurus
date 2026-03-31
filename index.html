@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bauhasaurus — Expediciones de arquitectura</title>
+  <meta name="description" content="Viajamos en grupos pequeños a destinos únicos donde la arquitectura es el lente para explorar, aprender y vivir nuevas experiencias." />
+  <meta property="og:title" content="Bauhasaurus — Expediciones de arquitectura" />
+  <meta property="og:description" content="Expediciones para arquitectos y amantes del espacio construido." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="/styles/main.css" />
+</head>
+<body>
+
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <img src="/assets/img/LogoBauhasaurusWordmark.png" alt="Bauhasaurus" class="loader__logo">
+  </div>
+
+  <!-- ============================================================
+       NAV
+  ============================================================ -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo">
+        <img src="/assets/img/LogoBauhasaurusWordmark.png" alt="Bauhasaurus" class="nav__logo-img">
+      </a>
+
+      <div class="nav__links">
+        <a href="/viajes.html" class="nav__link">Expediciones</a>
+        <a href="#mision" class="nav__link">Nosotros</a>
+        <a href="#articulos" class="nav__link nav__link--soon">Artículos</a>
+        <a href="#actividades" class="nav__link nav__link--soon">Actividades</a>
+        <a href="#" class="nav__link nav__link--soon">Shop</a>
+      </div>
+
+      <div class="nav__cta">
+        <a href="https://wa.me/XXXXXXXXXXX" target="_blank" rel="noopener" class="btn btn--outline btn--sm">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.55 4.116 1.516 5.849L.057 23.569a.5.5 0 00.611.637l5.872-1.539A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.81 9.81 0 01-5.032-1.383l-.36-.213-3.735.979.997-3.647-.234-.374A9.815 9.815 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+          WhatsApp
+        </a>
+        <a href="/viajes.html" class="btn btn--primary btn--sm">Ver expediciones</a>
+      </div>
+
+      <button class="nav__hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="nav__mobile" id="mobileMenu">
+    <button class="nav__hamburger" id="hamburgerClose" style="position:absolute;top:20px;right:24px">
+      <span style="transform:rotate(45deg) translate(5px,5px)"></span>
+      <span style="opacity:0"></span>
+      <span style="transform:rotate(-45deg) translate(5px,-5px)"></span>
+    </button>
+    <a href="/viajes.html" class="nav__link t-display-sm">Expediciones</a>
+    <a href="#mision" class="nav__link t-display-sm" id="mobileNosotros">Nosotros</a>
+    <span class="nav__link t-display-sm" style="opacity:0.25">Artículos <small style="font-size:12px;color:var(--accent-gold)">pronto</small></span>
+    <span class="nav__link t-display-sm" style="opacity:0.25">Shop <small style="font-size:12px;color:var(--accent-gold)">pronto</small></span>
+  </div>
+
+  <!-- ============================================================
+       MARQUEE
+  ============================================================ -->
+  <div class="marquee-banner" style="margin-top:var(--nav-h)">
+    <div class="marquee-banner__track" id="marqueeTrack">
+      <!-- duplicated for infinite loop -->
+      <span class="marquee-banner__item">Descubrí las nuevas expediciones <span class="marquee-banner__sep">✦</span></span>
+      <span class="marquee-banner__item">Uruguay + Paraguay — 2026 <span class="marquee-banner__sep">✦</span></span>
+      <span class="marquee-banner__item">Brasil: Río · Brasilia · São Paulo <span class="marquee-banner__sep">✦</span></span>
+      <span class="marquee-banner__item">Grupos pequeños, experiencias únicas <span class="marquee-banner__sep">✦</span></span>
+      <span class="marquee-banner__item">Descubrí las nuevas expediciones <span class="marquee-banner__sep">✦</span></span>
+      <span class="marquee-banner__item">Uruguay + Paraguay — 2026 <span class="marquee-banner__sep">✦</span></span>
+      <span class="marquee-banner__item">Brasil: Río · Brasilia · São Paulo <span class="marquee-banner__sep">✦</span></span>
+      <span class="marquee-banner__item">Grupos pequeños, experiencias únicas <span class="marquee-banner__sep">✦</span></span>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <div class="hero__geo">
+        <div class="hero__geo-circle"></div>
+        <div class="hero__geo-circle"></div>
+        <div class="hero__geo-line"></div>
+        <div class="hero__geo-line"></div>
+      </div>
+    </div>
+
+    <video
+      class="hero__video"
+      id="heroVideo"
+      autoplay
+      muted
+      loop
+      playsinline
+    >
+      <source src="/assets/videos/AleComprimido.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero__overlay"></div>
+
+    <div class="hero__content">
+      <div class="hero__inner">
+        <div class="hero__pretitle" id="heroPretitle">
+          <div class="hero__pretitle-dot"></div>
+          <span class="t-label text-muted">Expediciones de arquitectura</span>
+        </div>
+
+        <h1 class="t-display-xl hero__title" id="heroTitle">
+          Viajamos<br>
+          diferente<span class="text-accent">.</span>
+        </h1>
+
+        <p class="t-body-lg hero__subtitle" id="heroSubtitle">
+          Grupos pequeños, destinos únicos. La arquitectura como lente para explorar el mundo.
+        </p>
+
+        <div class="hero__actions" id="heroActions">
+          <a href="/viajes.html" class="btn btn--primary btn--lg">Ver expediciones</a>
+          <a href="#mision" class="btn btn--ghost btn--lg">Conocer más</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__scroll">
+      <span class="t-label" style="font-size:10px;writing-mode:vertical-rl;letter-spacing:0.14em;color:var(--text-muted)">scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       EXPEDICIONES
+  ============================================================ -->
+  <section class="section expediciones" id="expediciones">
+    <div class="container">
+      <div class="section-header reveal">
+        <div>
+          <p class="t-label section-header__eyebrow">Próximas expediciones</p>
+          <h2 class="t-display-md">Dónde vamos</h2>
+        </div>
+        <a href="/viajes.html" class="btn btn--ghost">Todas las expediciones</a>
+      </div>
+
+      <!-- Carousel -->
+      <div class="carousel" id="tripCarousel">
+        <button class="carousel__arrow carousel__arrow--prev" id="carouselPrev" aria-label="Anterior">
+          <svg viewBox="0 0 18 18"><polyline points="11 4 6 9 11 14"/></svg>
+        </button>
+
+        <div class="carousel__track-wrap">
+          <div class="carousel__track" id="carouselTrack">
+
+            <!-- CARD: Uruguay -->
+            <a href="/viajes/uruguay-paraguay.html" class="trip-card" style="width: calc(33.33% - 16px); min-width: 280px;">
+              <div class="trip-card__placeholder trip-card__placeholder--uy trip-card__bg"></div>
+              <div class="trip-card__overlay"></div>
+              <div class="trip-card__dates">
+                <div class="trip-card__date-badge">10/08/2026</div>
+                <div class="trip-card__date-badge">22/08/2026</div>
+              </div>
+              <div class="trip-card__body">
+                <p class="trip-card__subtitle">Uruguay + Paraguay</p>
+                <h3 class="trip-card__title">Arquitectura<br>moderna</h3>
+                <div class="trip-card__footer">
+                  <div class="trip-card__leader">
+                    <div class="trip-card__leader-avatar">A</div>
+                    <span class="trip-card__leader-name">Ale</span>
+                  </div>
+                  <span class="trip-card__status trip-card__status--available">Reservar</span>
+                </div>
+              </div>
+            </a>
+
+            <!-- CARD: Brasil Río -->
+            <a href="/viajes/brasil.html" class="trip-card" style="width: calc(33.33% - 16px); min-width: 280px;">
+              <div class="trip-card__placeholder trip-card__placeholder--br trip-card__bg"></div>
+              <div class="trip-card__overlay"></div>
+              <div class="trip-card__dates">
+                <div class="trip-card__date-badge">05/09/2026</div>
+                <div class="trip-card__date-badge">19/09/2026</div>
+              </div>
+              <div class="trip-card__body">
+                <p class="trip-card__subtitle">Brasil — Río · Brasilia · SP</p>
+                <h3 class="trip-card__title">El laboratorio<br>moderno</h3>
+                <div class="trip-card__footer">
+                  <div class="trip-card__leader">
+                    <div class="trip-card__leader-avatar">A</div>
+                    <span class="trip-card__leader-name">Ale</span>
+                  </div>
+                  <span class="trip-card__status trip-card__status--available">Reservar</span>
+                </div>
+              </div>
+            </a>
+
+            <!-- CARD: Próximamente -->
+            <div class="trip-card" style="width: calc(33.33% - 16px); min-width: 280px; opacity:0.45; cursor:default;">
+              <div class="trip-card__bg" style="background: var(--surface);"></div>
+              <div class="trip-card__overlay"></div>
+              <div class="trip-card__body">
+                <p class="trip-card__subtitle">2027</p>
+                <h3 class="trip-card__title">Próximas<br>expediciones</h3>
+                <div class="trip-card__footer">
+                  <span style="font-size:13px; color: var(--accent-gold); font-family: var(--font-display); letter-spacing:0.06em; text-transform:uppercase;">Pronto</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <button class="carousel__arrow carousel__arrow--next" id="carouselNext" aria-label="Siguiente">
+          <svg viewBox="0 0 18 18"><polyline points="7 4 12 9 7 14"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MISIÓN / BIO
+  ============================================================ -->
+  <section class="section mision" id="mision">
+    <div class="container">
+      <div class="mision__inner">
+        <div class="reveal">
+          <p class="t-label mision__label">Quiénes somos</p>
+          <h2 class="t-display-md">Arquitectura<br>como experiencia<span class="text-accent">.</span></h2>
+          <div class="mision__text t-body-lg">
+            <p>
+              Bauhasaurus nació de una convicción simple: la arquitectura se entiende mejor viviéndola que estudiándola en libros.
+            </p>
+            <p>
+              Organizamos expediciones en grupos pequeños a los destinos donde la arquitectura definió una época, una cultura, una manera de habitar el mundo. Cada viaje es una lectura colectiva del espacio construido.
+            </p>
+            <p>
+              No somos turismo. Somos una forma de mirar.
+            </p>
+          </div>
+          <div style="margin-top:36px;">
+            <a href="/viajes.html" class="btn btn--outline">Ver expediciones</a>
+          </div>
+        </div>
+
+        <div class="mision__visual reveal reveal--delay-2">
+          <div class="mision__geo">
+            <div class="mision__geo-cross-h"></div>
+            <div class="mision__geo-cross-v"></div>
+            <div class="mision__geo-outer">
+              <div class="mision__geo-inner"></div>
+            </div>
+          </div>
+          <!-- imagen de Ale / foto del estudio cuando esté disponible -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       COMING SOON
+  ============================================================ -->
+  <section class="section coming-soon" id="articulos">
+    <div class="container">
+      <div class="section-header reveal">
+        <div>
+          <p class="t-label section-header__eyebrow">Más que viajes</p>
+          <h2 class="t-display-md">Lo que viene</h2>
+        </div>
+      </div>
+
+      <div class="coming-soon__grid">
+
+        <div class="soon-card reveal reveal--delay-1">
+          <div class="soon-card__badge">Pronto</div>
+          <h3 class="soon-card__title">Artículos</h3>
+          <p class="soon-card__desc">Lecturas profundas sobre arquitectura, ciudad y territorio. El contexto detrás de cada destino.</p>
+          <div class="soon-card__num">01</div>
+        </div>
+
+        <div class="soon-card reveal reveal--delay-2" id="actividades">
+          <div class="soon-card__badge">Pronto</div>
+          <h3 class="soon-card__title">Actividades</h3>
+          <p class="soon-card__desc">Charlas, recorridos locales, workshops. La arquitectura como práctica colectiva más allá del viaje.</p>
+          <div class="soon-card__num">02</div>
+        </div>
+
+        <div class="soon-card reveal reveal--delay-3">
+          <div class="soon-card__badge">Pronto</div>
+          <h3 class="soon-card__title">Cursos</h3>
+          <p class="soon-card__desc">Formación especializada en lectura del espacio, historia de la arquitectura y crítica contemporánea.</p>
+          <div class="soon-card__num">03</div>
+        </div>
+
+        <div class="soon-card reveal reveal--delay-4">
+          <div class="soon-card__badge">Pronto</div>
+          <h3 class="soon-card__title">Shop</h3>
+          <p class="soon-card__desc">Libros, guías, materiales de viaje y objetos seleccionados para el arquitecto curioso.</p>
+          <div class="soon-card__num">04</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+
+        <div class="footer__brand">
+          <img src="/assets/img/LogoBauhasaurusWordmark.png" alt="Bauhasaurus" class="footer__logo-img">
+          <p class="footer__tagline">Expediciones de arquitectura en grupos pequeños. Viajamos diferente.</p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Instagram">IG</a>
+            <a href="#" class="footer__social-link" aria-label="WhatsApp">WA</a>
+          </div>
+        </div>
+
+        <div>
+          <p class="footer__col-title">Expediciones</p>
+          <div class="footer__links">
+            <a href="/viajes/uruguay-paraguay.html" class="footer__link">Uruguay + Paraguay</a>
+            <a href="/viajes/brasil.html" class="footer__link">Brasil</a>
+            <a href="/viajes.html" class="footer__link">Ver todas</a>
+          </div>
+        </div>
+
+        <div>
+          <p class="footer__col-title">Contacto</p>
+          <div class="footer__links">
+            <a href="https://wa.me/XXXXXXXXXXX" target="_blank" rel="noopener" class="footer__link">WhatsApp — Info</a>
+            <a href="https://wa.me/XXXXXXXXXXX" target="_blank" rel="noopener" class="footer__link">WhatsApp — Reservas</a>
+            <a href="#mision" class="footer__link">Nosotros</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2026 Bauhasaurus. Todos los derechos reservados.</p>
+        <a href="#" class="footer__mestiza">Mestiza Estudio →</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/scripts/main.js"></script>
+</body>
+</html>

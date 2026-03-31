@@ -1,0 +1,1563 @@
+/* ============================================================
+   BAUHASAURUS — Design System
+   ============================================================ */
+
+/* NeueMontreal — self-hosted */
+@font-face {
+  font-family: 'NeueMontreal';
+  src: url('/assets/fonts/NeueMontreal-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'NeueMontreal';
+  src: url('/assets/fonts/NeueMontreal-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'NeueMontreal';
+  src: url('/assets/fonts/NeueMontreal-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ============================================================
+   1. TOKENS
+   ============================================================ */
+
+:root {
+  /* Colors */
+  --bg:          #0C0C0C;
+  --bg-2:        #111411;
+  --bg-3:        #181A16;
+  --surface:     #1C1F1A;
+  --border:      rgba(255, 255, 255, 0.08);
+  --text:        #F0EDE8;
+  --text-muted:  rgba(240, 237, 232, 0.5);
+  --accent:      #7CB518;
+  --accent-dark: #5E8A0E;
+  --accent-gold: #D4C239;
+
+  /* Typography */
+  --font-display: 'NeueMontreal', sans-serif;
+  --font-body:    'NeueMontreal', sans-serif;
+
+  /* Sizing */
+  --nav-h:       88px;
+  --marquee-h:   36px;
+  --radius-card: 12px;
+  --radius-pill: 100px;
+  --max-w:       1280px;
+  --gutter:      clamp(20px, 5vw, 80px);
+
+  /* Transitions */
+  --t-fast:   0.18s ease;
+  --t-normal: 0.32s ease;
+  --t-slow:   0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ============================================================
+   2. RESET
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img, video { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; border: none; background: none; font: inherit; }
+ul, ol { list-style: none; }
+
+/* ============================================================
+   3. TYPOGRAPHY
+   ============================================================ */
+
+.t-display-xl {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(52px, 9vw, 120px);
+  line-height: 0.94;
+  letter-spacing: -0.03em;
+}
+
+.t-display-lg {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(36px, 5.5vw, 72px);
+  line-height: 0.96;
+  letter-spacing: -0.02em;
+}
+
+.t-display-md {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(26px, 3.5vw, 44px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.t-display-sm {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(18px, 2.5vw, 28px);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+.t-label {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.t-body-lg { font-size: 18px; line-height: 1.65; font-weight: 400; }
+.t-body    { font-size: 16px; line-height: 1.65; }
+.t-body-sm { font-size: 14px; line-height: 1.6; }
+
+/* ============================================================
+   4. LAYOUT UTILS
+   ============================================================ */
+
+.container {
+  max-width: var(--max-w);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.section {
+  padding-block: clamp(80px, 10vw, 140px);
+}
+
+.section--sm {
+  padding-block: clamp(48px, 6vw, 80px);
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ============================================================
+   5. BUTTONS
+   ============================================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: all var(--t-normal);
+  white-space: nowrap;
+}
+
+.btn--primary {
+  background: var(--accent);
+  color: #fff;
+}
+.btn--primary:hover {
+  background: var(--accent-dark);
+  transform: translateY(-1px);
+}
+
+.btn--outline {
+  background: transparent;
+  color: var(--accent);
+  border: 1.5px solid var(--accent);
+}
+.btn--outline:hover {
+  background: rgba(124, 181, 24, 0.08);
+  transform: translateY(-1px);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--text);
+  border: 1.5px solid var(--border);
+}
+.btn--ghost:hover {
+  border-color: rgba(255,255,255,0.3);
+}
+
+.btn--sm {
+  padding: 10px 20px;
+  font-size: 13px;
+}
+
+.btn--lg {
+  padding: 18px 40px;
+  font-size: 17px;
+}
+
+/* ============================================================
+   6. NAV
+   ============================================================ */
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  transition: background var(--t-normal), border-color var(--t-normal);
+  border-bottom: 1px solid transparent;
+}
+
+.nav.scrolled {
+  background: rgba(12, 12, 12, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom-color: var(--border);
+}
+
+.nav__inner {
+  max-width: var(--max-w);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.nav__logo-img {
+  height: 38px;
+  width: auto;
+  display: block;
+  transition: opacity var(--t-fast);
+}
+.nav__logo:hover .nav__logo-img {
+  opacity: 0.85;
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 52px;
+  margin-inline: auto;
+  padding-inline: 56px;
+}
+
+.nav__link {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  transition: color var(--t-fast);
+  position: relative;
+}
+.nav__link:hover,
+.nav__link.active {
+  color: var(--text);
+}
+.nav__link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: var(--accent);
+  transition: width var(--t-normal);
+}
+.nav__link:hover::after,
+.nav__link.active::after {
+  width: 100%;
+}
+
+.nav__link--soon {
+  opacity: 0.35;
+  pointer-events: none;
+}
+.nav__link--soon::before {
+  content: 'pronto';
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: var(--accent-gold);
+  white-space: nowrap;
+}
+
+.nav__cta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Mobile nav */
+.nav__hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+}
+.nav__hamburger span {
+  display: block;
+  width: 24px;
+  height: 1.5px;
+  background: var(--text);
+  transition: all var(--t-normal);
+}
+
+.nav__mobile {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  z-index: 99;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+.nav__mobile.open {
+  display: flex;
+}
+.nav__mobile .nav__link {
+  font-size: 32px;
+  color: var(--text);
+}
+
+/* ============================================================
+   7. HERO
+   ============================================================ */
+
+.hero {
+  position: relative;
+  height: calc(100vh - var(--nav-h) - var(--marquee-h));
+  min-height: 520px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    #1A0E08 0%,
+    #0C0C0C 40%,
+    #0A1018 100%
+  );
+  overflow: hidden;
+}
+
+/* Bauhaus geometric placeholder (shown when no video) */
+.hero__bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 80% at 70% 50%, rgba(124, 181, 24, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 60% at 20% 80%, rgba(212, 194, 57, 0.06) 0%, transparent 50%);
+}
+
+.hero__geo {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.hero__geo-circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(124, 181, 24, 0.15);
+}
+.hero__geo-circle:nth-child(1) {
+  width: 600px; height: 600px;
+  right: -100px; top: -100px;
+}
+.hero__geo-circle:nth-child(2) {
+  width: 400px; height: 400px;
+  right: 100px; top: 100px;
+  border-color: rgba(212, 194, 57, 0.1);
+}
+.hero__geo-line {
+  position: absolute;
+  background: rgba(124, 181, 24, 0.08);
+}
+.hero__geo-line:nth-child(3) {
+  width: 1px; height: 100%;
+  right: 33%;
+}
+.hero__geo-line:nth-child(4) {
+  width: 100%; height: 1px;
+  top: 60%;
+}
+
+.hero__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+.hero__video.loaded {
+  opacity: 1;
+}
+
+/* ── Page loader ── */
+.loader {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+.loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+.loader__logo {
+  height: 56px;
+  width: auto;
+  animation: loaderPulse 1.6s ease-in-out infinite;
+}
+@keyframes loaderPulse {
+  0%, 100% { opacity: 1;   transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.97); }
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(12, 12, 12, 0.95) 0%,
+    rgba(12, 12, 12, 0.4) 50%,
+    rgba(12, 12, 12, 0.2) 100%
+  );
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.hero__inner {
+  max-width: var(--max-w);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.hero__pretitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  animation: heroFadeUp 0.7s ease 0.3s both;
+}
+.hero__pretitle-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.hero__title {
+  margin-bottom: 24px;
+  animation: heroFadeUp 0.8s ease 0.5s both;
+}
+
+.hero__subtitle {
+  max-width: 520px;
+  margin-bottom: 40px;
+  color: var(--text-muted);
+  animation: heroFadeUp 0.7s ease 0.75s both;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  animation: heroFadeUp 0.7s ease 0.95s both;
+}
+
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero__scroll {
+  position: absolute;
+  bottom: 32px;
+  right: var(--gutter);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.4;
+  z-index: 2;
+}
+.hero__scroll-line {
+  width: 1px;
+  height: 48px;
+  background: linear-gradient(to bottom, var(--text), transparent);
+  animation: scrollLine 2s ease-in-out infinite;
+}
+@keyframes scrollLine {
+  0%, 100% { opacity: 0.4; transform: scaleY(1); }
+  50% { opacity: 1; transform: scaleY(0.6); }
+}
+
+/* ============================================================
+   8. TRIP CARDS
+   ============================================================ */
+
+.trip-card {
+  position: relative;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  aspect-ratio: 3/4;
+  cursor: pointer;
+  transition: transform var(--t-slow);
+  flex-shrink: 0;
+}
+
+.trip-card:hover {
+  transform: scale(1.02);
+}
+
+.trip-card__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform var(--t-slow);
+}
+.trip-card:hover .trip-card__bg {
+  transform: scale(1.04);
+}
+
+.trip-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(12, 12, 12, 0.97) 0%,
+    rgba(12, 12, 12, 0.5) 45%,
+    rgba(12, 12, 12, 0.1) 100%
+  );
+}
+
+.trip-card__dates {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-end;
+}
+
+.trip-card__date-badge {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--text);
+}
+
+.trip-card__body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.trip-card__subtitle {
+  color: var(--accent);
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.trip-card__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 1.0;
+  color: var(--text);
+}
+
+.trip-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.trip-card__leader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.trip-card__leader-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent-gold);
+}
+.trip-card__leader-name {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.trip-card__status {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+}
+.trip-card__status--available {
+  background: var(--accent);
+  color: #fff;
+}
+.trip-card__status--sold-out {
+  background: rgba(255,255,255,0.1);
+  color: var(--text-muted);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+/* Placeholder art for cards without photos */
+.trip-card__placeholder {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.trip-card__placeholder--uy {
+  background: linear-gradient(145deg, #1A2C1A 0%, #0C1A0C 40%, #0D1A2A 100%);
+}
+.trip-card__placeholder--br {
+  background: linear-gradient(145deg, #2A1A0C 0%, #1A0C0C 40%, #0C0C1A 100%);
+}
+.trip-card__placeholder--py {
+  background: linear-gradient(145deg, #2A0C1A 0%, #1A0C0C 40%, #1A1A0C 100%);
+}
+.trip-card__placeholder::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* ============================================================
+   9. CAROUSEL
+   ============================================================ */
+
+.carousel {
+  position: relative;
+}
+
+.carousel__track-wrap {
+  overflow: hidden;
+}
+
+.carousel__track {
+  display: flex;
+  gap: 24px;
+  transition: transform var(--t-slow);
+}
+
+.carousel__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--t-fast);
+  color: var(--text);
+}
+.carousel__arrow:hover {
+  background: rgba(255,255,255,0.15);
+  border-color: rgba(255,255,255,0.25);
+}
+.carousel__arrow--prev { left: -24px; }
+.carousel__arrow--next { right: -24px; }
+.carousel__arrow svg { width: 18px; height: 18px; stroke: currentColor; stroke-width: 2; fill: none; }
+
+/* ============================================================
+   10. SECTION: EXPEDICIONES (HOME)
+   ============================================================ */
+
+.expediciones {
+  background: var(--bg);
+}
+
+.section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 56px;
+  gap: 24px;
+}
+
+.section-header__eyebrow {
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+/* ============================================================
+   11. SECTION: BIO/MISIÓN
+   ============================================================ */
+
+.mision {
+  background: var(--bg-2);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.mision__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(48px, 8vw, 120px);
+  align-items: center;
+}
+
+.mision__label {
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+.mision__text {
+  margin-top: 24px;
+  color: var(--text-muted);
+}
+
+.mision__text p + p {
+  margin-top: 16px;
+}
+
+.mision__visual {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.mision__geo {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mision__geo-outer {
+  width: 70%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid rgba(124, 181, 24, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mision__geo-inner {
+  width: 50%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(124, 181, 24, 0.15), transparent);
+  border: 1px solid rgba(124, 181, 24, 0.3);
+}
+.mision__geo-cross-h {
+  position: absolute;
+  width: 70%;
+  height: 1px;
+  background: rgba(255,255,255,0.05);
+}
+.mision__geo-cross-v {
+  position: absolute;
+  height: 70%;
+  width: 1px;
+  background: rgba(255,255,255,0.05);
+}
+
+/* ============================================================
+   12. SECTION: COMING SOON
+   ============================================================ */
+
+.coming-soon {
+  background: var(--bg);
+}
+
+.coming-soon__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.soon-card {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 32px 24px;
+  overflow: hidden;
+  transition: border-color var(--t-normal);
+}
+.soon-card:hover {
+  border-color: rgba(255,255,255,0.15);
+}
+
+.soon-card__badge {
+  display: inline-block;
+  background: rgba(212, 194, 57, 0.12);
+  color: var(--accent-gold);
+  border: 1px solid rgba(212, 194, 57, 0.2);
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-family: var(--font-display);
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.soon-card__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.soon-card__desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.soon-card__num {
+  position: absolute;
+  bottom: -10px;
+  right: 16px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 1;
+  color: rgba(255,255,255,0.03);
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ============================================================
+   13. FOOTER
+   ============================================================ */
+
+.footer {
+  background: var(--bg-2);
+  border-top: 1px solid var(--border);
+  padding-block: 60px 40px;
+}
+
+.footer__inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 32px;
+}
+
+.footer__logo-img {
+  height: 44px;
+  width: auto;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.footer__tagline {
+  font-size: 14px;
+  color: var(--text-muted);
+  max-width: 280px;
+  margin-bottom: 24px;
+}
+
+.footer__social {
+  display: flex;
+  gap: 12px;
+}
+.footer__social-link {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  transition: all var(--t-fast);
+  color: var(--text-muted);
+}
+.footer__social-link:hover {
+  border-color: rgba(255,255,255,0.3);
+  color: var(--text);
+}
+
+.footer__col-title {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.footer__link {
+  font-size: 14px;
+  color: var(--text-muted);
+  transition: color var(--t-fast);
+}
+.footer__link:hover { color: var(--text); }
+
+.footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.footer__copy {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.footer__mestiza {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  transition: all var(--t-fast);
+}
+.footer__mestiza:hover {
+  color: var(--text);
+  border-color: rgba(255,255,255,0.25);
+}
+
+/* ============================================================
+   14. VIAJES PAGE — FILTERS
+   ============================================================ */
+
+.page-hero {
+  padding-top: calc(var(--nav-h) + 60px);
+  padding-bottom: 60px;
+  background: var(--bg);
+}
+
+.filter-bar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 56px;
+}
+
+.filter-btn {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 10px 22px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--border);
+  color: var(--text-muted);
+  transition: all var(--t-fast);
+}
+.filter-btn:hover,
+.filter-btn.active {
+  border-color: var(--accent);
+  color: var(--text);
+  background: rgba(124, 181, 24, 0.08);
+}
+.filter-btn.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.viajes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.viajes-grid .trip-card {
+  aspect-ratio: 3/4;
+}
+
+.trip-card--hidden {
+  display: none !important;
+}
+
+/* ============================================================
+   15. TRIP DETAIL PAGE
+   ============================================================ */
+
+.trip-hero {
+  position: relative;
+  height: calc(100vh - var(--nav-h) - var(--marquee-h));
+  min-height: 520px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.trip-hero__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.trip-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(12, 12, 12, 1) 0%,
+    rgba(12, 12, 12, 0.6) 40%,
+    rgba(12, 12, 12, 0.2) 100%
+  );
+}
+
+.trip-hero__content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding-bottom: 60px;
+}
+
+.trip-hero__meta {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.trip-hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.trip-hero__badge-dot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.trip-hero__info-bar {
+  display: flex;
+  gap: 0;
+  margin-top: 28px;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  backdrop-filter: blur(16px);
+  background: rgba(12,12,12,0.6);
+  max-width: 720px;
+}
+
+.trip-info-item {
+  flex: 1;
+  padding: 20px 24px;
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+.trip-info-item:last-child { border-right: none; }
+
+.trip-info-item__label {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-family: var(--font-display);
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.trip-info-item__value {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--text);
+  line-height: 1.2;
+}
+.trip-info-item__value--accent {
+  color: var(--accent-gold);
+}
+
+/* Trip content sections */
+.trip-content {
+  max-width: 900px;
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.trip-section {
+  padding-block: 64px;
+  border-bottom: 1px solid var(--border);
+}
+
+.trip-section:last-child {
+  border-bottom: none;
+}
+
+.trip-section__title {
+  margin-bottom: 36px;
+}
+
+/* Accordion (itinerary) */
+.accordion-item {
+  border-bottom: 1px solid var(--border);
+}
+
+.accordion-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  text-align: left;
+  gap: 16px;
+}
+
+.accordion-btn__left {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.accordion-btn__day {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.accordion-btn__title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--text);
+}
+
+.accordion-btn__icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all var(--t-normal);
+}
+.accordion-btn__icon svg {
+  width: 12px; height: 12px;
+  stroke: var(--text-muted);
+  transition: transform var(--t-normal);
+}
+.accordion-item.open .accordion-btn__icon {
+  background: rgba(217,79,30,0.1);
+  border-color: rgba(217,79,30,0.3);
+}
+.accordion-item.open .accordion-btn__icon svg {
+  transform: rotate(45deg);
+  stroke: var(--accent);
+}
+
+.accordion-body {
+  height: 0;
+  overflow: hidden;
+  transition: height var(--t-slow);
+}
+
+.accordion-body__inner {
+  padding: 0 0 24px 0;
+  padding-left: 72px;
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* Included / Not included */
+.included-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.included-col__title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.included-col__dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+}
+.included-col__dot--yes { background: #4CAF50; }
+.included-col__dot--no  { background: #888; }
+
+.included-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.included-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 15px;
+  color: var(--text-muted);
+}
+.included-item::before {
+  content: '—';
+  color: var(--border);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* CTA section */
+.trip-cta {
+  background: var(--bg-2);
+  border-top: 1px solid var(--border);
+  padding-block: clamp(64px, 8vw, 100px);
+  text-align: center;
+}
+
+.trip-cta__title {
+  margin-bottom: 16px;
+}
+
+.trip-cta__subtitle {
+  color: var(--text-muted);
+  margin-bottom: 40px;
+  max-width: 480px;
+  margin-inline: auto;
+}
+
+.trip-cta__btns {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Expand block */
+.expand-block {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+}
+
+.expand-block__header {
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: background var(--t-fast);
+}
+.expand-block__header:hover {
+  background: rgba(255,255,255,0.02);
+}
+
+.expand-block__icon {
+  font-size: 20px;
+  transition: transform var(--t-normal);
+}
+.expand-block.open .expand-block__icon {
+  transform: rotate(45deg);
+}
+
+.expand-block__body {
+  height: 0;
+  overflow: hidden;
+  transition: height var(--t-slow);
+}
+
+.expand-block__body-inner {
+  padding: 0 24px 24px;
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* ============================================================
+   16. MARQUEE BANNER
+   ============================================================ */
+
+.marquee-banner {
+  background: var(--accent);
+  overflow: hidden;
+  padding-block: 10px;
+  position: relative;
+}
+
+.marquee-banner__track {
+  display: flex;
+  gap: 0;
+  animation: marquee 20s linear infinite;
+  white-space: nowrap;
+}
+
+.marquee-banner__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  padding-right: 48px;
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+}
+.marquee-banner__sep {
+  color: rgba(255,255,255,0.5);
+  font-size: 8px;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ============================================================
+   17. UTILITIES
+   ============================================================ */
+
+.text-accent { color: var(--accent); }
+.text-gold   { color: var(--accent-gold); }
+.text-muted  { color: var(--text-muted); }
+
+.divider {
+  height: 1px;
+  background: var(--border);
+  margin-block: 0;
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal--delay-1 { transition-delay: 0.1s; }
+.reveal--delay-2 { transition-delay: 0.2s; }
+.reveal--delay-3 { transition-delay: 0.3s; }
+.reveal--delay-4 { transition-delay: 0.4s; }
+
+/* ============================================================
+   18. RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 1024px) {
+  .coming-soon__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .mision__inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .mision__visual {
+    max-width: 400px;
+  }
+  .footer__inner {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer__brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --nav-h: 64px;
+  }
+
+  .nav__links,
+  .nav__cta { display: none; }
+  .nav__hamburger { display: flex; }
+
+  .viajes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .coming-soon__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .carousel__arrow--prev { left: -12px; }
+  .carousel__arrow--next { right: -12px; }
+
+  .included-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trip-hero__info-bar {
+    flex-direction: column;
+  }
+  .trip-info-item {
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .trip-info-item:last-child { border-bottom: none; }
+
+  .footer__inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .viajes-grid {
+    grid-template-columns: 1fr;
+  }
+  .coming-soon__grid {
+    grid-template-columns: 1fr;
+  }
+  .hero__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero__actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .trip-cta__btns {
+    flex-direction: column;
+    align-items: center;
+  }
+}

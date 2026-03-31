@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expediciones — Bauhasaurus</title>
+  <meta name="description" content="Todas las expediciones de arquitectura de Bauhasaurus. Uruguay, Paraguay, Brasil y más destinos." />
+  <link rel="stylesheet" href="/styles/main.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav scrolled" id="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo">
+        <img src="/assets/img/LogoBauhasaurusWordmark.png" alt="Bauhasaurus" class="nav__logo-img">
+      </a>
+      <div class="nav__links">
+        <a href="/viajes.html" class="nav__link active">Expediciones</a>
+        <a href="/#mision" class="nav__link">Nosotros</a>
+        <span class="nav__link nav__link--soon">Artículos</span>
+        <span class="nav__link nav__link--soon">Actividades</span>
+        <span class="nav__link nav__link--soon">Shop</span>
+      </div>
+      <div class="nav__cta">
+        <a href="https://wa.me/XXXXXXXXXXX" target="_blank" rel="noopener" class="btn btn--outline btn--sm">WhatsApp</a>
+      </div>
+      <button class="nav__hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="nav__mobile" id="mobileMenu">
+    <button class="nav__hamburger" id="hamburgerClose" style="position:absolute;top:20px;right:24px">
+      <span style="transform:rotate(45deg) translate(5px,5px)"></span>
+      <span style="opacity:0"></span>
+      <span style="transform:rotate(-45deg) translate(5px,-5px)"></span>
+    </button>
+    <a href="/viajes.html" class="nav__link t-display-sm">Expediciones</a>
+    <a href="/#mision" class="nav__link t-display-sm">Nosotros</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="container">
+      <p class="t-label text-accent" style="margin-bottom:16px;">Bauhasaurus</p>
+      <h1 class="t-display-lg" style="margin-bottom:20px;">Expediciones<span class="text-accent">.</span></h1>
+      <p class="t-body-lg text-muted" style="max-width:560px;">
+        Viajes en grupos pequeños a destinos donde la arquitectura cuenta la historia de una cultura.
+      </p>
+    </div>
+  </div>
+
+  <!-- FILTERS + GRID -->
+  <section class="section--sm" style="background:var(--bg); padding-top:0;">
+    <div class="container">
+
+      <div class="filter-bar" id="filterBar">
+        <button class="filter-btn active" data-filter="todos">Todas</button>
+        <button class="filter-btn" data-filter="uruguay-paraguay">Uruguay + Paraguay</button>
+        <button class="filter-btn" data-filter="brasil">Brasil</button>
+      </div>
+
+      <div class="viajes-grid" id="viajesGrid">
+
+        <!-- CARD: Uruguay + Paraguay -->
+        <a href="/viajes/uruguay-paraguay.html" class="trip-card" data-filter="uruguay-paraguay">
+          <div class="trip-card__placeholder trip-card__placeholder--uy trip-card__bg"></div>
+          <div class="trip-card__overlay"></div>
+          <div class="trip-card__dates">
+            <div class="trip-card__date-badge">10/08/2026</div>
+            <div class="trip-card__date-badge">22/08/2026</div>
+          </div>
+          <div class="trip-card__body">
+            <p class="trip-card__subtitle">13 días · USD 1.800</p>
+            <h3 class="trip-card__title">Uruguay<br>+ Paraguay</h3>
+            <div class="trip-card__footer">
+              <div class="trip-card__leader">
+                <div class="trip-card__leader-avatar">A</div>
+                <span class="trip-card__leader-name">Ale</span>
+              </div>
+              <span class="trip-card__status trip-card__status--available">Reservar</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- CARD: Brasil completo -->
+        <a href="/viajes/brasil.html" class="trip-card" data-filter="brasil">
+          <div class="trip-card__placeholder trip-card__placeholder--br trip-card__bg"></div>
+          <div class="trip-card__overlay"></div>
+          <div class="trip-card__dates">
+            <div class="trip-card__date-badge">05/09/2026</div>
+            <div class="trip-card__date-badge">19/09/2026</div>
+          </div>
+          <div class="trip-card__body">
+            <p class="trip-card__subtitle">15 días · USD 2.200</p>
+            <h3 class="trip-card__title">Brasil<br>Completo</h3>
+            <div class="trip-card__footer">
+              <div class="trip-card__leader">
+                <div class="trip-card__leader-avatar">A</div>
+                <span class="trip-card__leader-name">Ale</span>
+              </div>
+              <span class="trip-card__status trip-card__status--available">Reservar</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- CARD: Brasil solo Río -->
+        <a href="/viajes/brasil.html#rio" class="trip-card" data-filter="brasil">
+          <div class="trip-card__placeholder trip-card__placeholder--br trip-card__bg" style="background: linear-gradient(145deg,#1A1A0C,#0C1A0C,#0A0A1A)"></div>
+          <div class="trip-card__overlay"></div>
+          <div class="trip-card__dates">
+            <div class="trip-card__date-badge">05/09/2026</div>
+            <div class="trip-card__date-badge">09/09/2026</div>
+          </div>
+          <div class="trip-card__body">
+            <p class="trip-card__subtitle">Por tramo · consultar</p>
+            <h3 class="trip-card__title">Brasil<br>— Río</h3>
+            <div class="trip-card__footer">
+              <div class="trip-card__leader">
+                <div class="trip-card__leader-avatar">A</div>
+                <span class="trip-card__leader-name">Ale</span>
+              </div>
+              <span class="trip-card__status trip-card__status--available">Consultar</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- CARD: Uruguay solo -->
+        <a href="/viajes/uruguay-paraguay.html#uruguay" class="trip-card" data-filter="uruguay-paraguay">
+          <div class="trip-card__placeholder trip-card__placeholder--uy trip-card__bg" style="background:linear-gradient(145deg,#0C2A1A,#0A1A0C,#1A2A0C)"></div>
+          <div class="trip-card__overlay"></div>
+          <div class="trip-card__dates">
+            <div class="trip-card__date-badge">10/08/2026</div>
+            <div class="trip-card__date-badge">15/08/2026</div>
+          </div>
+          <div class="trip-card__body">
+            <p class="trip-card__subtitle">Por tramo · consultar</p>
+            <h3 class="trip-card__title">Solo<br>Uruguay</h3>
+            <div class="trip-card__footer">
+              <div class="trip-card__leader">
+                <div class="trip-card__leader-avatar">A</div>
+                <span class="trip-card__leader-name">Ale</span>
+              </div>
+              <span class="trip-card__status trip-card__status--available">Consultar</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- CARD: Paraguay solo -->
+        <a href="/viajes/uruguay-paraguay.html#paraguay" class="trip-card" data-filter="uruguay-paraguay">
+          <div class="trip-card__placeholder trip-card__placeholder--py trip-card__bg"></div>
+          <div class="trip-card__overlay"></div>
+          <div class="trip-card__dates">
+            <div class="trip-card__date-badge">16/08/2026</div>
+            <div class="trip-card__date-badge">22/08/2026</div>
+          </div>
+          <div class="trip-card__body">
+            <p class="trip-card__subtitle">Por tramo · consultar</p>
+            <h3 class="trip-card__title">Solo<br>Paraguay</h3>
+            <div class="trip-card__footer">
+              <div class="trip-card__leader">
+                <div class="trip-card__leader-avatar">A</div>
+                <span class="trip-card__leader-name">Ale</span>
+              </div>
+              <span class="trip-card__status trip-card__status--available">Consultar</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="section--sm" style="background:var(--bg-2); border-top:1px solid var(--border);">
+    <div class="container" style="text-align:center;">
+      <p class="t-label text-muted" style="margin-bottom:16px;">¿No encontrás lo que buscás?</p>
+      <h2 class="t-display-sm" style="margin-bottom:24px;">Contactanos directamente</h2>
+      <p class="t-body text-muted" style="max-width:440px;margin-inline:auto;margin-bottom:32px;">
+        Si tenés preguntas sobre destinos, fechas, precios o querés armar algo a medida, escribinos.
+      </p>
+      <a href="https://wa.me/XXXXXXXXXXX" target="_blank" rel="noopener" class="btn btn--primary btn--lg">
+        Escribir por WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <img src="/assets/img/LogoBauhasaurusWordmark.png" alt="Bauhasaurus" class="footer__logo-img">
+          <p class="footer__tagline">Expediciones de arquitectura en grupos pequeños.</p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link">IG</a>
+            <a href="#" class="footer__social-link">WA</a>
+          </div>
+        </div>
+        <div>
+          <p class="footer__col-title">Expediciones</p>
+          <div class="footer__links">
+            <a href="/viajes/uruguay-paraguay.html" class="footer__link">Uruguay + Paraguay</a>
+            <a href="/viajes/brasil.html" class="footer__link">Brasil</a>
+          </div>
+        </div>
+        <div>
+          <p class="footer__col-title">Contacto</p>
+          <div class="footer__links">
+            <a href="https://wa.me/XXXXXXXXXXX" target="_blank" rel="noopener" class="footer__link">WhatsApp Info</a>
+            <a href="https://wa.me/XXXXXXXXXXX" target="_blank" rel="noopener" class="footer__link">WhatsApp Reservas</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2026 Bauhasaurus.</p>
+        <a href="#" class="footer__mestiza">Mestiza Estudio →</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/scripts/viajes.js"></script>
+</body>
+</html>

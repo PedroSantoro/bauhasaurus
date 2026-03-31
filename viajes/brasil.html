@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brasil — Expediciones Bauhasaurus</title>
+  <meta name="description" content="Expedición de arquitectura por Brasil: Río de Janeiro, Brasilia y São Paulo. Niemeyer, Lina Bo Bardi, brutalismo paulista." />
+  <link rel="stylesheet" href="/styles/main.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo">
+        <img src="/assets/img/LogoBauhasaurusWordmark.png" alt="Bauhasaurus" class="nav__logo-img">
+      </a>
+      <div class="nav__links">
+        <a href="/viajes.html" class="nav__link active">Expediciones</a>
+        <a href="/#mision" class="nav__link">Nosotros</a>
+        <span class="nav__link nav__link--soon">Artículos</span>
+        <span class="nav__link nav__link--soon">Actividades</span>
+      </div>
+      <div class="nav__cta">
+        <a href="https://wa.me/XXXXXXXXXXX" target="_blank" rel="noopener" class="btn btn--primary btn--sm">Reservar lugar</a>
+      </div>
+      <button class="nav__hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="nav__mobile" id="mobileMenu">
+    <button class="nav__hamburger" id="hamburgerClose" style="position:absolute;top:20px;right:24px">
+      <span style="transform:rotate(45deg) translate(5px,5px)"></span>
+      <span style="opacity:0"></span>
+      <span style="transform:rotate(-45deg) translate(5px,-5px)"></span>
+    </button>
+    <a href="/viajes.html" class="nav__link t-display-sm">Expediciones</a>
+    <a href="https://wa.me/XXXXXXXXXXX" target="_blank" rel="noopener" class="btn btn--primary" style="margin-top:16px;">Reservar lugar</a>
+  </div>
+
+  <!-- ============================================================
+       TRIP HERO
+  ============================================================ -->
+  <section class="trip-hero" id="trip-hero">
+    <div class="trip-hero__bg trip-card__placeholder--br" style="width:100%;height:100%;position:absolute;inset:0;"></div>
+    <div class="trip-hero__overlay"></div>
+
+    <div class="trip-hero__content">
+      <div class="container">
+        <div class="trip-hero__meta">
+          <span class="trip-hero__badge">
+            <span class="trip-hero__badge-dot"></span>
+            Expedición disponible
+          </span>
+          <span class="trip-hero__badge" style="background:transparent;border-color:rgba(255,255,255,0.1);">
+            15 días
+          </span>
+        </div>
+
+        <h1 class="t-display-xl" style="opacity:1;transform:none;">
+          Brasil<span class="text-accent">.</span>
+        </h1>
+        <p class="t-display-sm text-muted" style="margin-top:8px;margin-bottom:16px;">
+          Río · Brasilia · São Paulo
+        </p>
+        <p class="t-body-lg text-muted" style="max-width:520px;">
+          El laboratorio moderno de América Latina. Niemeyer, Lina Bo Bardi, brutalismo paulista y la utopía de Brasilia.
+        </p>
+
+        <div class="trip-hero__info-bar">
+          <div class="trip-info-item">
+            <div class="trip-info-item__label">Fechas</div>
+            <div class="trip-info-item__value">05/09 — 19/09/2026</div>
+          </div>
+          <div class="trip-info-item">
+            <div class="trip-info-item__label">Destino</div>
+            <div class="trip-info-item__value">Río · Brasilia · São Paulo</div>
+          </div>
+          <div class="trip-info-item">
+            <div class="trip-info-item__label">Desde</div>
+            <div class="trip-info-item__value trip-info-item__value--accent">USD 2.200</div>
+          </div>
+          <div class="trip-info-item">
+            <div class="trip-info-item__label">Guía</div>
+            <div class="trip-info-item__value">Ale</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TRIP CONTENT
+  ============================================================ -->
+  <div style="background:var(--bg); padding-block: clamp(64px,8vw,100px);">
+    <div class="trip-content">
+
+      <!-- Descripción -->
+      <div class="trip-section reveal">
+        <p class="t-label text-accent" style="margin-bottom:16px;">El viaje</p>
+        <p class="t-body-lg" style="margin-bottom:20px;">
+          Ningún país latinoamericano tuvo una relación tan intensa y consciente con la arquitectura moderna como Brasil. Este viaje recorre los tres laboratorios donde esa relación se construyó: Río de Janeiro, Brasilia y São Paulo.
+        </p>
+        <p class="t-body text-muted">
+          Tres ciudades con lógicas completamente distintas. Tres formas de imaginar lo moderno. Un mismo país que convirtió la arquitectura en programa político y cultural.
+        </p>
+
+        <!-- Paquetes -->
+        <div style="margin-top:36px; display:flex; gap:10px; flex-wrap:wrap;">
+          <span style="display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border:1px solid var(--border);border-radius:var(--radius-pill);font-size:13px;font-family:var(--font-display);font-weight:600;letter-spacing:0.04em;text-transform:uppercase;color:var(--text-muted);">
+            Completo (3 ciudades)
+          </span>
+          <span style="display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border:1px solid var(--border);border-radius:var(--radius-pill);font-size:13px;font-family:var(--font-display);font-weight:600;letter-spacing:0.04em;text-transform:uppercase;color:var(--text-muted);" id="rio">
+            Solo Río de Janeiro
+          </span>
+          <span style="display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border:1px solid var(--border);border-radius:var(--radius-pill);font-size:13px;font-family:var(--font-display);font-weight:600;letter-spacing:0.04em;text-transform:uppercase;color:var(--text-muted);">
+            Solo Brasilia
+          </span>
+          <span style="display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border:1px solid var(--border);border-radius:var(--radius-pill);font-size:13px;font-family:var(--font-display);font-weight:600;letter-spacing:0.04em;text-transform:uppercase;color:var(--text-muted);">
+            Solo São Paulo
+          </span>
+        </div>
+      </div>
+
+      <!-- Itinerario -->
+      <div class="trip-section reveal">
+        <p class="t-label text-accent trip-section__title">Itinerario</p>
+        <div class="accordion" id="accordion">
+
+          <div class="accordion-item">
+            <button class="accordion-btn">
+              <div class="accordion-btn__left">
+                <span class="accordion-btn__day">Días 1–4</span>
+                <span class="accordion-btn__title">Río de Janeiro</span>
+              </div>
+              <div class="accordion-btn__icon">
+                <svg viewBox="0 0 12 12" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/>
+                </svg>
+              </div>
+            </button>
+            <div class="accordion-body">
+              <div class="accordion-body__inner">
+                Llegada a Río. Centro histórico y arquitectura ecléctica. Museu de Arte Moderna (Affonso Eduardo Reidy), Aterro do Flamengo, Museu Nacional de Belas Artes. Arquitectura colonial en el Centro. Charla sobre modernismo carioca.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn">
+              <div class="accordion-btn__left">
+                <span class="accordion-btn__day">Día 5</span>
+                <span class="accordion-btn__title">Traslado a Brasilia</span>
+              </div>
+              <div class="accordion-btn__icon">
+                <svg viewBox="0 0 12 12" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/>
+                </svg>
+              </div>
+            </button>
+            <div class="accordion-body">
+              <div class="accordion-body__inner">
+                Vuelo Río → Brasilia. Llegada y primera lectura desde el avión de la planta piloto de Lúcio Costa.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn">
+              <div class="accordion-btn__left">
+                <span class="accordion-btn__day">Días 6–8</span>
+                <span class="accordion-btn__title">Brasilia — La utopía construida</span>
+              </div>
+              <div class="accordion-btn__icon">
+                <svg viewBox="0 0 12 12" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/>
+                </svg>
+              </div>
+            </button>
+            <div class="accordion-body">
+              <div class="accordion-body__inner">
+                Tres días completos. Eje Monumental: Praça dos Três Poderes, Congresso Nacional, Palácio do Planalto, Supremo Tribunal Federal (Niemeyer). Superquadras residenciales. Catedral Metropolitana. Palácio da Alvorada. Museu Nacional de Brasília.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn">
+              <div class="accordion-btn__left">
+                <span class="accordion-btn__day">Día 9</span>
+                <span class="accordion-btn__title">Traslado a São Paulo</span>
+              </div>
+              <div class="accordion-btn__icon">
+                <svg viewBox="0 0 12 12" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/>
+                </svg>
+              </div>
+            </button>
+            <div class="accordion-body">
+              <div class="accordion-body__inner">
+                Vuelo Brasilia → São Paulo. Instalación en Vila Madalena o Pinheiros.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn">
+              <div class="accordion-btn__left">
+                <span class="accordion-btn__day">Días 10–13</span>
+                <span class="accordion-btn__title">São Paulo — Brutalismo y metrópolis</span>
+              </div>
+              <div class="accordion-btn__icon">
+                <svg viewBox="0 0 12 12" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/>
+                </svg>
+              </div>
+            </button>
+            <div class="accordion-body">
+              <div class="accordion-body__inner">
+                MASP y SESC Pompeia (Lina Bo Bardi). Faculdade de Arquitetura e Urbanismo (Vilanova Artigas). Museu Brasileiro da Escultura (Paulo Mendes da Rocha). El brutalismo paulista como programa ético. Arquitectura contemporánea.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn">
+              <div class="accordion-btn__left">
+                <span class="accordion-btn__day">Días 14–15</span>
+                <span class="accordion-btn__title">Cierre y regreso</span>
+              </div>
+              <div class="accordion-btn__icon">
+                <svg viewBox="0 0 12 12" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/>
+                </svg>
+              </div>
+            </button>
+            <div class="accordion-body">
+              <div class="accordion-body__inner">
+                Arquitectura doméstica moderna en São Paulo. Tiempo libre para profundizar lo visto. Vuelo de regreso.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Incluido / No incluido -->
+      <div class="trip-section reveal">
+        <p class="t-label text-accent trip-section__title">Qué incluye</p>
+        <div class="included-grid">
+          <div>
+            <div class="included-col__title">
+              <div class="included-col__dot included-col__dot--yes"></div>
+              <span class="t-label">Incluido</span>
+            </div>
+            <ul class="included-list">
+              <li class="included-item">Alojamiento en hoteles boutique y pousadas seleccionadas</li>
+              <li class="included-item">Desayunos incluidos todos los días</li>
+              <li class="included-item">Traslados y excursiones según itinerario</li>
+              <li class="included-item">Vuelos internos (Río → Brasilia → São Paulo)</li>
+              <li class="included-item">Guía especializada durante todo el recorrido</li>
+              <li class="included-item">Entradas a museos y sitios indicados</li>
+              <li class="included-item">Materiales de estudio (guía impresa del viaje)</li>
+            </ul>
+          </div>
+          <div>
+            <div class="included-col__title">
+              <div class="included-col__dot included-col__dot--no"></div>
+              <span class="t-label">No incluido</span>
+            </div>
+            <ul class="included-list">
+              <li class="included-item">Vuelo internacional de llegada (Buenos Aires–Río)</li>
+              <li class="included-item">Vuelo de regreso (São Paulo–Buenos Aires)</li>
+              <li class="included-item">Almuerzos y cenas (salvo indicación)</li>
+              <li class="included-item">Gastos personales y extras</li>
+              <li class="included-item">Seguro de viaje (recomendado)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bloque extendido -->
+      <div class="trip-section reveal">
+        <p class="t-label text-accent" style="margin-bottom:24px;">Para quien quiere más</p>
+        <div class="expand-block" id="expandBlock">
+          <div class="expand-block__header" id="expandHeader">
+            <div>
+              <h3 class="t-display-sm">Tres ciudades, tres modernidades</h3>
+              <p class="t-body-sm text-muted" style="margin-top:6px;">El proyecto moderno brasileño y sus contradicciones</p>
+            </div>
+            <span class="expand-block__icon">+</span>
+          </div>
+          <div class="expand-block__body" id="expandBody">
+            <div class="expand-block__body-inner">
+              <p style="margin-bottom:16px;">
+                <strong style="color:var(--text);">Río de Janeiro</strong> fue el primer laboratorio. Allí, en los años 30 y 40, Lúcio Costa y Oscar Niemeyer tomaron las ideas de Le Corbusier y las transformaron en algo radicalmente propio. El ministerio de Educación y Salud (1936) es una de las primeras obras del movimiento moderno en América Latina y todavía sorprende por su audacia.
+              </p>
+              <p style="margin-bottom:16px;">
+                <strong style="color:var(--text);">Brasilia</strong> es la obra más ambiciosa del modernismo latinoamericano: una capital construida desde cero en el interior del país, inaugurada en 1960. Lúcio Costa diseñó el plan urbano; Niemeyer, los edificios cívicos. El resultado es único en el mundo: una ciudad-monumento donde la arquitectura y el urbanismo son inseparables del proyecto político.
+              </p>
+              <p>
+                <strong style="color:var(--text);">São Paulo</strong> tomó el modernismo y lo metabolizó en brutalismo: hormigón expuesto, escala monumental, compromiso social. Vilanova Artigas y Paulo Mendes da Rocha —premio Pritzker 2006— desarrollaron una arquitectura que es al mismo tiempo técnica y ética. Lina Bo Bardi, italiana de adopción paulista, añadió una dimensión diferente: popular, festiva, profundamente brasileña.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================================
+       CTA FINAL
+  ============================================================ -->
+  <section class="trip-cta">
+    <div class="container">
+      <p class="t-label text-accent" style="margin-bottom:16px;">¿Te sumás?</p>
+      <h2 class="t-display-md trip-cta__title">Brasil<br><span class="text-accent">2026</span></h2>
+      <p class="t-body text-muted trip-cta__subtitle">
+        Lugares limitados. Podés viajar completo o por tramo: solo Río, solo Brasilia o solo São Paulo.
+      </p>
+      <div class="trip-cta__btns">
+        <a
+          href="https://wa.me/XXXXXXXXXXX?text=Hola%2C%20quiero%20reservar%20un%20lugar%20en%20la%20expedici%C3%B3n%20Brasil%202026"
+          target="_blank"
+          rel="noopener"
+          class="btn btn--primary btn--lg"
+        >
+          Quiero viajar
+        </a>
+        <a
+          href="https://wa.me/XXXXXXXXXXX?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20expedici%C3%B3n%20Brasil%202026"
+          target="_blank"
+          rel="noopener"
+          class="btn btn--outline btn--lg"
+        >
+          Quiero más información
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <img src="/assets/img/LogoBauhasaurusWordmark.png" alt="Bauhasaurus" class="footer__logo-img">
+          <p class="footer__tagline">Expediciones de arquitectura en grupos pequeños.</p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link">IG</a>
+            <a href="#" class="footer__social-link">WA</a>
+          </div>
+        </div>
+        <div>
+          <p class="footer__col-title">Expediciones</p>
+          <div class="footer__links">
+            <a href="/viajes/uruguay-paraguay.html" class="footer__link">Uruguay + Paraguay</a>
+            <a href="/viajes/brasil.html" class="footer__link">Brasil</a>
+            <a href="/viajes.html" class="footer__link">Ver todas</a>
+          </div>
+        </div>
+        <div>
+          <p class="footer__col-title">Contacto</p>
+          <div class="footer__links">
+            <a href="https://wa.me/XXXXXXXXXXX" target="_blank" rel="noopener" class="footer__link">WhatsApp Info</a>
+            <a href="https://wa.me/XXXXXXXXXXX" target="_blank" rel="noopener" class="footer__link">WhatsApp Reservas</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2026 Bauhasaurus.</p>
+        <a href="#" class="footer__mestiza">Mestiza Estudio →</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/scripts/trip.js"></script>
+</body>
+</html>

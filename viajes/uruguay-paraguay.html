@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uruguay + Paraguay — Expediciones Bauhasaurus</title>
+  <meta name="description" content="Expedición de arquitectura por Uruguay y Paraguay. Arquitectura moderna latinoamericana, misiones jesuíticas y territorio." />
+  <link rel="stylesheet" href="/styles/main.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo">
+        <img src="/assets/img/LogoBauhasaurusWordmark.png" alt="Bauhasaurus" class="nav__logo-img">
+      </a>
+      <div class="nav__links">
+        <a href="/viajes.html" class="nav__link active">Expediciones</a>
+        <a href="/#mision" class="nav__link">Nosotros</a>
+        <span class="nav__link nav__link--soon">Artículos</span>
+        <span class="nav__link nav__link--soon">Actividades</span>
+      </div>
+      <div class="nav__cta">
+        <a href="https://wa.me/XXXXXXXXXXX" target="_blank" rel="noopener" class="btn btn--primary btn--sm">Reservar lugar</a>
+      </div>
+      <button class="nav__hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="nav__mobile" id="mobileMenu">
+    <button class="nav__hamburger" id="hamburgerClose" style="position:absolute;top:20px;right:24px">
+      <span style="transform:rotate(45deg) translate(5px,5px)"></span>
+      <span style="opacity:0"></span>
+      <span style="transform:rotate(-45deg) translate(5px,-5px)"></span>
+    </button>
+    <a href="/viajes.html" class="nav__link t-display-sm">Expediciones</a>
+    <a href="https://wa.me/XXXXXXXXXXX" target="_blank" rel="noopener" class="btn btn--primary" style="margin-top:16px;">Reservar lugar</a>
+  </div>
+
+  <!-- ============================================================
+       TRIP HERO
+  ============================================================ -->
+  <section class="trip-hero" id="trip-hero">
+    <div class="trip-hero__bg trip-card__placeholder--uy" style="width:100%;height:100%;position:absolute;inset:0;background-size:cover;background-position:center;">
+      <!-- imagen: assets/img/uy-py-hero.jpg cuando esté disponible -->
+    </div>
+    <div class="trip-hero__overlay"></div>
+
+    <div class="trip-hero__content">
+      <div class="container">
+        <div class="trip-hero__meta">
+          <span class="trip-hero__badge">
+            <span class="trip-hero__badge-dot"></span>
+            Expedición disponible
+          </span>
+          <span class="trip-hero__badge" style="background:transparent;border-color:rgba(255,255,255,0.1);">
+            13 días
+          </span>
+        </div>
+
+        <h1 class="t-display-xl" style="opacity:1;transform:none;">
+          Uruguay<br>+ Paraguay<span class="text-accent">.</span>
+        </h1>
+        <p class="t-body-lg text-muted" style="margin-top:16px;max-width:520px;">
+          Arquitectura moderna latinoamericana y territorio. Montevideo, Colonia, Asunción, Misiones Jesuíticas.
+        </p>
+
+        <!-- Info bar: fechas / destino / precio — visible sin scroll -->
+        <div class="trip-hero__info-bar">
+          <div class="trip-info-item">
+            <div class="trip-info-item__label">Fechas</div>
+            <div class="trip-info-item__value">10/08 — 22/08/2026</div>
+          </div>
+          <div class="trip-info-item">
+            <div class="trip-info-item__label">Destino</div>
+            <div class="trip-info-item__value">Montevideo · Asunción</div>
+          </div>
+          <div class="trip-info-item">
+            <div class="trip-info-item__label">Desde</div>
+            <div class="trip-info-item__value trip-info-item__value--accent">USD 1.800</div>
+          </div>
+          <div class="trip-info-item">
+            <div class="trip-info-item__label">Guía</div>
+            <div class="trip-info-item__value">Ale</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TRIP CONTENT
+  ============================================================ -->
+  <div style="background:var(--bg); padding-block: clamp(64px,8vw,100px);">
+    <div class="trip-content">
+
+      <!-- Descripción -->
+      <div class="trip-section reveal">
+        <p class="t-label text-accent" style="margin-bottom:16px;">El viaje</p>
+        <p class="t-body-lg" style="margin-bottom:20px;">
+          Un recorrido por la arquitectura moderna latinoamericana en dos destinos únicos. Uruguay, con su herencia de modernismo europeo adaptado al territorio rioplatense. Paraguay, con su arquitectura jesuítica y sus experimentos contemporáneos en el corazón del continente.
+        </p>
+        <p class="t-body text-muted">
+          Este viaje propone una lectura cruzada de dos tradiciones arquitectónicas que comparten región pero difieren radicalmente en historia, escala y materialidad. Viajamos en grupo pequeño, con tiempo para mirar con calma.
+        </p>
+
+        <!-- Paquetes disponibles -->
+        <div style="margin-top:36px; display:flex; gap:10px; flex-wrap:wrap;">
+          <span style="display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border:1px solid var(--border);border-radius:var(--radius-pill);font-size:13px;font-family:var(--font-display);font-weight:600;letter-spacing:0.04em;text-transform:uppercase;color:var(--text-muted);">
+            Completo (UY + PY)
+          </span>
+          <span style="display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border:1px solid var(--border);border-radius:var(--radius-pill);font-size:13px;font-family:var(--font-display);font-weight:600;letter-spacing:0.04em;text-transform:uppercase;color:var(--text-muted);">
+            Solo Uruguay
+          </span>
+          <span style="display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border:1px solid var(--border);border-radius:var(--radius-pill);font-size:13px;font-family:var(--font-display);font-weight:600;letter-spacing:0.04em;text-transform:uppercase;color:var(--text-muted);" id="paraguay">
+            Solo Paraguay
+          </span>
+        </div>
+      </div>
+
+      <!-- Itinerario -->
+      <div class="trip-section reveal">
+        <p class="t-label text-accent trip-section__title">Itinerario</p>
+        <div class="accordion" id="accordion">
+
+          <div class="accordion-item">
+            <button class="accordion-btn">
+              <div class="accordion-btn__left">
+                <span class="accordion-btn__day">Día 1</span>
+                <span class="accordion-btn__title">Llegada a Montevideo</span>
+              </div>
+              <div class="accordion-btn__icon">
+                <svg viewBox="0 0 12 12" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/>
+                </svg>
+              </div>
+            </button>
+            <div class="accordion-body">
+              <div class="accordion-body__inner">
+                Llegada, instalación y primera caminata por el Centro Histórico de Montevideo. Primera lectura de la ciudad desde el Cerro.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn">
+              <div class="accordion-btn__left">
+                <span class="accordion-btn__day">Días 2–3</span>
+                <span class="accordion-btn__title">Arquitectura moderna montevideana</span>
+              </div>
+              <div class="accordion-btn__icon">
+                <svg viewBox="0 0 12 12" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/>
+                </svg>
+              </div>
+            </button>
+            <div class="accordion-body">
+              <div class="accordion-body__inner">
+                Recorrido por las obras más representativas del movimiento moderno: Palacio Salvo, edificios del período 1930–1960, barrio Pocitos y Carrasco. Charla con arquitecto local (a confirmar).
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn">
+              <div class="accordion-btn__left">
+                <span class="accordion-btn__day">Día 4</span>
+                <span class="accordion-btn__title">Colonia del Sacramento</span>
+              </div>
+              <div class="accordion-btn__icon">
+                <svg viewBox="0 0 12 12" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/>
+                </svg>
+              </div>
+            </button>
+            <div class="accordion-body">
+              <div class="accordion-body__inner">
+                Excursión de día completo a Colonia. Arquitectura colonial portuguesa e hibridaciones. Territorio, paisaje y el río como frontera construida.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn">
+              <div class="accordion-btn__left">
+                <span class="accordion-btn__day">Días 5–6</span>
+                <span class="accordion-btn__title">Periferia y arquitectura social</span>
+              </div>
+              <div class="accordion-btn__icon">
+                <svg viewBox="0 0 12 12" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/>
+                </svg>
+              </div>
+            </button>
+            <div class="accordion-body">
+              <div class="accordion-body__inner">
+                Lectura de la suburbanización montevideana. Arquitectura de vivienda social del siglo XX. Visita a obra contemporánea (a confirmar según obras disponibles).
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn">
+              <div class="accordion-btn__left">
+                <span class="accordion-btn__day">Día 7</span>
+                <span class="accordion-btn__title">Traslado a Asunción</span>
+              </div>
+              <div class="accordion-btn__icon">
+                <svg viewBox="0 0 12 12" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/>
+                </svg>
+              </div>
+            </button>
+            <div class="accordion-body">
+              <div class="accordion-body__inner">
+                Vuelo Montevideo → Asunción. Instalación y primera lectura de la capital paraguaya.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn">
+              <div class="accordion-btn__left">
+                <span class="accordion-btn__day">Días 8–9</span>
+                <span class="accordion-btn__title">Centro histórico y modernismo paraguayo</span>
+              </div>
+              <div class="accordion-btn__icon">
+                <svg viewBox="0 0 12 12" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/>
+                </svg>
+              </div>
+            </button>
+            <div class="accordion-body">
+              <div class="accordion-body__inner">
+                Recorrido por el casco histórico, el Palacio de los López, la Catedral Metropolitana. Arquitectura institucional del Estado. Modernismo tardío en Paraguay.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn">
+              <div class="accordion-btn__left">
+                <span class="accordion-btn__day">Días 10–11</span>
+                <span class="accordion-btn__title">Misiones Jesuíticas</span>
+              </div>
+              <div class="accordion-btn__icon">
+                <svg viewBox="0 0 12 12" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/>
+                </svg>
+              </div>
+            </button>
+            <div class="accordion-body">
+              <div class="accordion-body__inner">
+                Excursión de dos días a las Misiones Jesuíticas de Paraguay. Trinidad y Jesús, Patrimonio de la Humanidad. Lectura del territorio y el urbanismo colonial-religioso.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn">
+              <div class="accordion-btn__left">
+                <span class="accordion-btn__day">Días 12–13</span>
+                <span class="accordion-btn__title">Arquitectura contemporánea y cierre</span>
+              </div>
+              <div class="accordion-btn__icon">
+                <svg viewBox="0 0 12 12" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/>
+                </svg>
+              </div>
+            </button>
+            <div class="accordion-body">
+              <div class="accordion-body__inner">
+                Visita a obras de arquitectura contemporánea paraguaya. Encuentro con arquitectos locales (a confirmar). Mañana libre. Vuelo de regreso.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Incluido / No incluido -->
+      <div class="trip-section reveal">
+        <p class="t-label text-accent trip-section__title">Qué incluye</p>
+        <div class="included-grid">
+          <div>
+            <div class="included-col__title">
+              <div class="included-col__dot included-col__dot--yes"></div>
+              <span class="t-label">Incluido</span>
+            </div>
+            <ul class="included-list">
+              <li class="included-item">Alojamiento en hoteles boutique seleccionados</li>
+              <li class="included-item">Desayunos incluidos todos los días</li>
+              <li class="included-item">Traslados internos (excursiones y visitas)</li>
+              <li class="included-item">Vuelo interno Montevideo → Asunción</li>
+              <li class="included-item">Guía especializada en arquitectura durante todo el recorrido</li>
+              <li class="included-item">Entradas a museos y sitios del itinerario</li>
+              <li class="included-item">Materiales de estudio (guía impresa del viaje)</li>
+            </ul>
+          </div>
+          <div>
+            <div class="included-col__title">
+              <div class="included-col__dot included-col__dot--no"></div>
+              <span class="t-label">No incluido</span>
+            </div>
+            <ul class="included-list">
+              <li class="included-item">Vuelo internacional de llegada/salida (Buenos Aires–Montevideo)</li>
+              <li class="included-item">Almuerzos y cenas (salvo indicación)</li>
+              <li class="included-item">Gastos personales y extras</li>
+              <li class="included-item">Seguro de viaje (recomendado)</li>
+              <li class="included-item">Visas (verificar según pasaporte)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bloque extendido: profundización -->
+      <div class="trip-section reveal">
+        <p class="t-label text-accent" style="margin-bottom:24px;">Para quien quiere más</p>
+        <div class="expand-block" id="expandBlock">
+          <div class="expand-block__header" id="expandHeader">
+            <div>
+              <h3 class="t-display-sm">Contexto arquitectónico</h3>
+              <p class="t-body-sm text-muted" style="margin-top:6px;">Arquitectura moderna en el Río de la Plata y la tradición jesuítica paraguaya</p>
+            </div>
+            <span class="expand-block__icon">+</span>
+          </div>
+          <div class="expand-block__body" id="expandBody">
+            <div class="expand-block__body-inner">
+              <p style="margin-bottom:16px;">
+                Uruguay fue uno de los primeros países latinoamericanos en incorporar los principios del Movimiento Moderno. Arquitectos como Julio Vilamajó y Mauricio Cravotto tradujeron las ideas europeas en obras que respondían al clima, la topografía y el programa social rioplatense. Montevideo conserva un patrimonio moderno extraordinario que el mundo académico está redescubriendo.
+              </p>
+              <p style="margin-bottom:16px;">
+                Paraguay tiene una historia arquitectónica completamente diferente. Las Misiones Jesuíticas del siglo XVII-XVIII son uno de los experimentos urbanísticos más singulares de la historia: ciudades planificadas en medio de la selva, con una arquitectura que sintetizaba la tradición barroca europea con técnicas y materiales locales. Nada igual existe en el continente.
+              </p>
+              <p>
+                La yuxtaposición de ambas tradiciones —la modernidad montevideana y el barroco jesuítico— es el hilo conductor del viaje. No son culturas opuestas; son dos respuestas distintas a la misma pregunta: ¿cómo se construye una identidad colectiva a través del espacio?
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================================
+       CTA FINAL
+  ============================================================ -->
+  <section class="trip-cta">
+    <div class="container">
+      <p class="t-label text-accent" style="margin-bottom:16px;">¿Te sumás?</p>
+      <h2 class="t-display-md trip-cta__title">Uruguay + Paraguay<br><span class="text-accent">2026</span></h2>
+      <p class="t-body text-muted trip-cta__subtitle">
+        Los lugares son limitados. Si te interesa viajar completo o por tramo, escribinos ahora.
+      </p>
+      <div class="trip-cta__btns">
+        <a
+          href="https://wa.me/XXXXXXXXXXX?text=Hola%2C%20quiero%20reservar%20un%20lugar%20en%20la%20expedici%C3%B3n%20Uruguay%20%2B%20Paraguay%202026"
+          target="_blank"
+          rel="noopener"
+          class="btn btn--primary btn--lg"
+        >
+          Quiero viajar
+        </a>
+        <a
+          href="https://wa.me/XXXXXXXXXXX?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20expedici%C3%B3n%20Uruguay%20%2B%20Paraguay%202026"
+          target="_blank"
+          rel="noopener"
+          class="btn btn--outline btn--lg"
+        >
+          Quiero más información
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <img src="/assets/img/LogoBauhasaurusWordmark.png" alt="Bauhasaurus" class="footer__logo-img">
+          <p class="footer__tagline">Expediciones de arquitectura en grupos pequeños.</p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link">IG</a>
+            <a href="#" class="footer__social-link">WA</a>
+          </div>
+        </div>
+        <div>
+          <p class="footer__col-title">Expediciones</p>
+          <div class="footer__links">
+            <a href="/viajes/uruguay-paraguay.html" class="footer__link">Uruguay + Paraguay</a>
+            <a href="/viajes/brasil.html" class="footer__link">Brasil</a>
+            <a href="/viajes.html" class="footer__link">Ver todas</a>
+          </div>
+        </div>
+        <div>
+          <p class="footer__col-title">Contacto</p>
+          <div class="footer__links">
+            <a href="https://wa.me/XXXXXXXXXXX" target="_blank" rel="noopener" class="footer__link">WhatsApp Info</a>
+            <a href="https://wa.me/XXXXXXXXXXX" target="_blank" rel="noopener" class="footer__link">WhatsApp Reservas</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2026 Bauhasaurus.</p>
+        <a href="#" class="footer__mestiza">Mestiza Estudio →</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/scripts/trip.js"></script>
+</body>
+</html>
