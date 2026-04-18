@@ -2,6 +2,24 @@
 // BAUHASAURUS — Trip detail JS
 // ============================================================
 
+// ── Logo swap por tema de país ────────────────────────────────
+const THEME_LOGOS = {
+  'theme-br':   '/assets/img/LogoBauhasaurusWordmark_green.png',
+  'theme-uy':   '/assets/img/LogoBauhasaurusWordmark_lightblue.png',
+  'theme-py':   '/assets/img/LogoBauhasaurusWordmark_red.png',
+  'theme-uypy': '/assets/img/LogoBauhasaurusWordmark_purple.png',
+}
+
+;(function swapLogo() {
+  const body = document.body
+  const logoSrc = Object.entries(THEME_LOGOS).find(([cls]) => body.classList.contains(cls))?.[1]
+  if (!logoSrc) return
+  document.querySelectorAll('.nav__logo-img, .footer__logo-img').forEach(img => {
+    img.src = logoSrc
+  })
+})()
+
+
 // ── Nav ──────────────────────────────────────────────────────
 const nav = document.getElementById('nav')
 window.addEventListener('scroll', () => {

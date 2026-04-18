@@ -81,7 +81,7 @@ if (track && btnPrev && btnNext) {
     const max     = Math.max(0, cards.length - visible)
     currentIndex  = Math.max(0, Math.min(index, max))
     const offset  = currentIndex * (getCardWidth() + gap)
-    gsap.to(track, { x: -offset, duration: 0.55, ease: 'power3.inOut' })
+    track.style.transform = `translateX(-${offset}px)`
     btnPrev.style.opacity = currentIndex === 0 ? '0.3' : '1'
     btnNext.style.opacity = currentIndex >= max ? '0.3' : '1'
   }
@@ -98,6 +98,23 @@ if (track && btnPrev && btnNext) {
     clearTimeout(resizeTimer)
     resizeTimer = setTimeout(() => goTo(currentIndex), 100)
   })
+
+  // ── Touch / swipe support ────────────────────────────────
+  let touchStartX = 0
+  let touchEndX   = 0
+  const wrap = track.parentElement
+
+  wrap.addEventListener('touchstart', e => {
+    touchStartX = e.changedTouches[0].clientX
+  }, { passive: true })
+
+  wrap.addEventListener('touchend', e => {
+    touchEndX = e.changedTouches[0].clientX
+    const delta = touchStartX - touchEndX
+    if (Math.abs(delta) > 40) {
+      goTo(currentIndex + (delta > 0 ? 1 : -1))
+    }
+  }, { passive: true })
 }
 
 // ── Smooth scroll for anchor links ──────────────────────────

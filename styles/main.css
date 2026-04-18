@@ -42,6 +42,16 @@
   --accent-dark: #5E8A0E;
   --accent-gold: #D4C239;
 
+  /* Country accent colors — one per destination */
+  --accent-br:      #7CB518;   /* Brasil         — verde (default)  */
+  --accent-br-dark: #5E8A0E;
+  --accent-uy:      #4ABFDA;   /* Uruguay         — celeste          */
+  --accent-uy-dark: #2A9AB8;
+  --accent-py:      #E03030;   /* Paraguay         — rojo             */
+  --accent-py-dark: #B81E1E;
+  --accent-uypy:    #8B5CF6;   /* Uruguay+Paraguay — purple           */
+  --accent-uypy-dark: #6D28D9;
+
   /* Typography */
   --font-display: 'NeueMontreal', sans-serif;
   --font-body:    'NeueMontreal', sans-serif;
@@ -360,7 +370,7 @@ ul, ol { list-style: none; }
   position: fixed;
   inset: 0;
   background: var(--bg);
-  z-index: 99;
+  z-index: 101;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -582,6 +592,10 @@ ul, ol { list-style: none; }
 .trip-card__bg {
   position: absolute;
   inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   background-size: cover;
   background-position: center;
   transition: transform var(--t-slow);
@@ -729,12 +743,110 @@ ul, ol { list-style: none; }
   background-size: 40px 40px;
 }
 
+/* ── Country-specific card theming ──────────────────────────
+   Afecta: label subtitle, badge de fecha, botón Consultar
+   ────────────────────────────────────────────────────────── */
+
+/* Brasil — verde */
+.trip-card--br .trip-card__subtitle   { color: var(--accent-br); }
+.trip-card--br .trip-card__date-badge { border-color: rgba(124, 181, 24, 0.4); }
+.trip-card--br .trip-card__status--available { background: var(--accent-br); color: #fff; }
+.trip-card--br .trip-card__status--available:hover { background: var(--accent-br-dark); }
+
+/* Uruguay — celeste */
+.trip-card--uy .trip-card__subtitle   { color: var(--accent-uy); }
+.trip-card--uy .trip-card__date-badge { border-color: rgba(74, 191, 218, 0.4); }
+.trip-card--uy .trip-card__status--available { background: var(--accent-uy); color: #fff; }
+.trip-card--uy .trip-card__status--available:hover { background: var(--accent-uy-dark); }
+
+/* Paraguay — rojo */
+.trip-card--py .trip-card__subtitle   { color: var(--accent-py); }
+.trip-card--py .trip-card__date-badge { border-color: rgba(224, 48, 48, 0.4); }
+.trip-card--py .trip-card__status--available { background: var(--accent-py); color: #fff; }
+.trip-card--py .trip-card__status--available:hover { background: var(--accent-py-dark); }
+
+/* Uruguay + Paraguay — purple */
+.trip-card--uypy .trip-card__subtitle   { color: var(--accent-uypy); }
+.trip-card--uypy .trip-card__date-badge { border-color: rgba(139, 92, 246, 0.4); }
+.trip-card--uypy .trip-card__status--available { background: var(--accent-uypy); color: #fff; }
+.trip-card--uypy .trip-card__status--available:hover { background: var(--accent-uypy-dark); }
+
+/* ── Page-level themes (single trip pages) ───────────────────
+   Sobreescribe --accent en toda la página → todos los botones,
+   labels de sección, el punto hero, el "." en títulos, etc.
+   Agrega --logo-src para que JS cargue la variante de logo correcta.
+   Uso: <body class="theme-br">, <body class="theme-uy">, etc.
+   ────────────────────────────────────────────────────────── */
+
+/* Brasil — verde */
+.theme-br {
+  --accent:      var(--accent-br);
+  --accent-dark: var(--accent-br-dark);
+  --logo-src:    url('/assets/img/LogoBauhasaurusWordmark_green.png');
+  --bg-2:   #0C110C;
+  --bg-3:   #101610;
+  --surface: #141C14;
+}
+
+/* Uruguay — celeste */
+.theme-uy {
+  --accent:      var(--accent-uy);
+  --accent-dark: var(--accent-uy-dark);
+  --logo-src:    url('/assets/img/LogoBauhasaurusWordmark_lightblue.png');
+  --bg-2:   #080F13;
+  --bg-3:   #0A1418;
+  --surface: #0C1A20;
+}
+
+/* Paraguay — rojo */
+.theme-py {
+  --accent:      var(--accent-py);
+  --accent-dark: var(--accent-py-dark);
+  --logo-src:    url('/assets/img/LogoBauhasaurusWordmark_red.png');
+  --bg-2:   #130808;
+  --bg-3:   #180A0A;
+  --surface: #200C0C;
+}
+
+/* Uruguay + Paraguay — purple */
+.theme-uypy {
+  --accent:      var(--accent-uypy);
+  --accent-dark: var(--accent-uypy-dark);
+  --logo-src:    url('/assets/img/LogoBauhasaurusWordmark_purple.png');
+  --bg-2:   #0E0A18;
+  --bg-3:   #130E20;
+  --surface: #180F28;
+}
+
 /* ============================================================
    9. CAROUSEL
    ============================================================ */
 
 .carousel {
   position: relative;
+  overflow: visible;   /* allow arrows to overflow the container */
+}
+
+/* Responsive card sizing inside the carousel */
+.carousel__card {
+  /* Desktop: ~3 cards visible */
+  width: calc(33.33% - 16px);
+  min-width: 280px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1023px) {
+  .carousel__card {
+    /* Tablet: 2 cards */
+    width: calc(50% - 12px);
+  }
+}
+
+@media (max-width: 639px) {
+  .carousel__card {
+    /* Mobile: 1 card + peek */
+    width: 85%;
+  }
 }
 
 .carousel__track-wrap {
@@ -1090,8 +1202,295 @@ ul, ol { list-style: none; }
   aspect-ratio: 3/4;
 }
 
+/* Cards with description text — taller to fit content */
+.trip-card--full {
+  aspect-ratio: auto !important;
+  min-height: 460px;
+}
+
+.trip-card--full .trip-card__body {
+  gap: 10px;
+}
+
+.trip-card__desc {
+  font-size: 14px;
+  line-height: 1.55;
+  color: rgba(240, 237, 232, 0.65);
+  max-width: 360px;
+}
+
+.trip-card__dates-text {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+  position: relative;
+  z-index: 2;
+}
+.trip-card__dates-text--muted {
+  opacity: 0.45;
+}
+
+/* Full-overlay link for card click (avoids nested <a> issue) */
+.trip-card__link-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.trip-card__cta {
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+/* Coming soon cards */
+.trip-card--soon {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+}
+.trip-card--soon .trip-card__body {
+  gap: 10px;
+}
+.trip-card__soon-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border: 1px solid rgba(212, 194, 57, 0.4);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  flex-shrink: 0;
+}
+
 .trip-card--hidden {
   display: none !important;
+}
+
+/* ============================================================
+   COUNTRY SECTIONS — viajes.html
+   ============================================================ */
+
+.country-section {
+  padding: 64px 0;
+  border-top: 1px solid var(--border);
+  --cs-accent: var(--accent);
+}
+.country-section--brasil   { --cs-accent: var(--accent-br); }
+.country-section--combined { --cs-accent: var(--accent-uypy); }
+.country-section--uruguay  { --cs-accent: var(--accent-uy);  }
+.country-section--paraguay { --cs-accent: var(--accent-py);  }
+.country-section--soon     { --cs-accent: var(--accent-gold); }
+
+.country-section__header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 32px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+.country-section__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--cs-accent);
+  flex-shrink: 0;
+}
+.country-section__name {
+  font-family: var(--font-display);
+  font-size: clamp(20px, 2.2vw, 26px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--cs-accent);
+  line-height: 1;
+}
+.country-section__meta {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.country-section__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.country-section__grid--single {
+  grid-template-columns: 1fr;
+  max-width: 480px;
+}
+.country-section .trip-card__subtitle {
+  color: var(--cs-accent);
+}
+/* Botón Consultar hereda el color de sección */
+.country-section .btn--primary {
+  background: var(--cs-accent);
+}
+.country-section .btn--primary:hover {
+  background: color-mix(in srgb, var(--cs-accent) 80%, #000);
+}
+
+/* Featured card (Brasil Completo) — banner across full width */
+.trip-card--feature {
+  grid-column: 1 / -1;
+  min-height: 280px !important;
+}
+
+/* ============================================================
+   REVIEWS / TESTIMONIOS
+   ============================================================ */
+
+.reviews {
+  background: var(--bg-2);
+  border-top: 1px solid var(--border);
+}
+
+.reviews__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: start;
+}
+
+.reviews__quotes--grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.reviews__video-wrap {
+  position: relative;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  background: var(--surface);
+  aspect-ratio: 16/9;
+  border: 1px solid var(--border);
+}
+
+.reviews__video-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background: linear-gradient(135deg, #1A1A1A, #111);
+  color: var(--text-muted);
+}
+
+.reviews__video-placeholder svg {
+  width: 48px;
+  height: 48px;
+  opacity: 0.4;
+}
+
+.reviews__video-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.reviews__quotes {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.review-quote {
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+}
+
+.review-quote__text {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text);
+  margin-bottom: 16px;
+  font-style: italic;
+}
+
+.review-quote__author {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.review-quote__detail {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* ============================================================
+   YOUTUBE MODULE (home + trip pages)
+   ============================================================ */
+
+.yt-module {
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+}
+
+.yt-module__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: center;
+}
+
+.yt-module__text .t-label {
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.yt-module__text h2 {
+  margin-bottom: 16px;
+}
+
+.yt-module__text p {
+  color: var(--text-muted);
+  margin-bottom: 32px;
+  max-width: 400px;
+}
+
+.yt-module__video {
+  position: relative;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  aspect-ratio: 16/9;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.yt-module__video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.yt-module__video-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1A1A1A, #111);
+  color: var(--text-muted);
+  font-size: 14px;
+  gap: 12px;
 }
 
 /* ============================================================
@@ -1110,6 +1509,10 @@ ul, ol { list-style: none; }
 .trip-hero__bg {
   position: absolute;
   inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   background-size: cover;
   background-position: center;
 }
@@ -1495,6 +1898,19 @@ ul, ol { list-style: none; }
   .footer__brand {
     grid-column: 1 / -1;
   }
+  .reviews__inner,
+  .yt-module__inner {
+    grid-template-columns: 1fr;
+  }
+  .reviews__quotes--grid {
+    grid-template-columns: 1fr;
+  }
+  .country-section__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .trip-card--feature {
+    grid-column: 1 / -1;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1538,6 +1954,18 @@ ul, ol { list-style: none; }
   .section-header {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .country-section__grid {
+    grid-template-columns: 1fr;
+  }
+  .country-section__grid--single {
+    max-width: 100%;
+  }
+  .trip-card--feature {
+    grid-column: span 1;
   }
 }
 

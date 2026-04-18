@@ -5,15 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Uruguay + Paraguay — Expediciones Bauhasaurus</title>
   <meta name="description" content="Expedición de arquitectura por Uruguay y Paraguay. Arquitectura moderna latinoamericana, misiones jesuíticas y territorio." />
+  <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
   <link rel="stylesheet" href="/styles/main.css" />
 </head>
-<body>
+<body class="theme-uypy">
 
   <!-- NAV -->
   <nav class="nav" id="nav">
     <div class="nav__inner">
       <a href="/" class="nav__logo">
-        <img src="/assets/img/LogoBauhasaurusWordmark.png" alt="Bauhasaurus" class="nav__logo-img">
+        <img src="/assets/img/LogoBauhasaurusWordmark_green.png" alt="Bauhasaurus" class="nav__logo-img">
       </a>
       <div class="nav__links">
         <a href="/viajes.html" class="nav__link active">Expediciones</a>
@@ -22,7 +23,7 @@
         <span class="nav__link nav__link--soon">Actividades</span>
       </div>
       <div class="nav__cta">
-        <a href="https://wa.me/XXXXXXXXXXX" target="_blank" rel="noopener" class="btn btn--primary btn--sm">Reservar lugar</a>
+        <a href="https://wa.me/XXXXXXXXXXX" target="_blank" rel="noopener" class="btn btn--primary btn--sm">Consultar</a>
       </div>
       <button class="nav__hamburger" id="hamburger" aria-label="Menú">
         <span></span><span></span><span></span>
@@ -38,16 +39,14 @@
       <span style="transform:rotate(-45deg) translate(5px,-5px)"></span>
     </button>
     <a href="/viajes.html" class="nav__link t-display-sm">Expediciones</a>
-    <a href="https://wa.me/XXXXXXXXXXX" target="_blank" rel="noopener" class="btn btn--primary" style="margin-top:16px;">Reservar lugar</a>
+    <a href="https://wa.me/XXXXXXXXXXX" target="_blank" rel="noopener" class="btn btn--primary" style="margin-top:16px;">Consultar</a>
   </div>
 
   <!-- ============================================================
        TRIP HERO
   ============================================================ -->
   <section class="trip-hero" id="trip-hero">
-    <div class="trip-hero__bg trip-card__placeholder--uy" style="width:100%;height:100%;position:absolute;inset:0;background-size:cover;background-position:center;">
-      <!-- imagen: assets/img/uy-py-hero.jpg cuando esté disponible -->
-    </div>
+    <img src="/assets/img/UruguayyParaguayPORTADA.jpg" alt="Portada de Uruguay y Paraguay" class="trip-hero__bg">
     <div class="trip-hero__overlay"></div>
 
     <div class="trip-hero__content">
@@ -82,10 +81,6 @@
           <div class="trip-info-item">
             <div class="trip-info-item__label">Desde</div>
             <div class="trip-info-item__value trip-info-item__value--accent">USD 1.800</div>
-          </div>
-          <div class="trip-info-item">
-            <div class="trip-info-item__label">Guía</div>
-            <div class="trip-info-item__value">Ale</div>
           </div>
         </div>
       </div>
@@ -317,35 +312,46 @@
         </div>
       </div>
 
-      <!-- Bloque extendido: profundización -->
+      <!-- Video del viaje -->
       <div class="trip-section reveal">
-        <p class="t-label text-accent" style="margin-bottom:24px;">Para quien quiere más</p>
-        <div class="expand-block" id="expandBlock">
-          <div class="expand-block__header" id="expandHeader">
-            <div>
-              <h3 class="t-display-sm">Contexto arquitectónico</h3>
-              <p class="t-body-sm text-muted" style="margin-top:6px;">Arquitectura moderna en el Río de la Plata y la tradición jesuítica paraguaya</p>
-            </div>
-            <span class="expand-block__icon">+</span>
+        <p class="t-label text-accent" style="margin-bottom:16px;">El viaje en video</p>
+        <div class="reviews__video-wrap">
+          <div class="reviews__video-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:48px;height:48px;opacity:0.4"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/></svg>
+            <span class="t-label" style="font-size:12px; color: var(--text-muted);">Video próximamente</span>
           </div>
-          <div class="expand-block__body" id="expandBody">
-            <div class="expand-block__body-inner">
-              <p style="margin-bottom:16px;">
-                Uruguay fue uno de los primeros países latinoamericanos en incorporar los principios del Movimiento Moderno. Arquitectos como Julio Vilamajó y Mauricio Cravotto tradujeron las ideas europeas en obras que respondían al clima, la topografía y el programa social rioplatense. Montevideo conserva un patrimonio moderno extraordinario que el mundo académico está redescubriendo.
-              </p>
-              <p style="margin-bottom:16px;">
-                Paraguay tiene una historia arquitectónica completamente diferente. Las Misiones Jesuíticas del siglo XVII-XVIII son uno de los experimentos urbanísticos más singulares de la historia: ciudades planificadas en medio de la selva, con una arquitectura que sintetizaba la tradición barroca europea con técnicas y materiales locales. Nada igual existe en el continente.
-              </p>
-              <p>
-                La yuxtaposición de ambas tradiciones —la modernidad montevideana y el barroco jesuítico— es el hilo conductor del viaje. No son culturas opuestas; son dos respuestas distintas a la misma pregunta: ¿cómo se construye una identidad colectiva a través del espacio?
-              </p>
-            </div>
-          </div>
+          <!-- <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe> -->
         </div>
       </div>
 
     </div>
   </div>
+
+  <!-- ============================================================
+       TESTIMONIOS
+  ============================================================ -->
+  <section class="section reviews" style="border-bottom: 1px solid var(--border);">
+    <div class="container">
+      <p class="t-label section-header__eyebrow reveal" style="margin-bottom:24px;">Lo que dicen</p>
+      <div class="reviews__quotes" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap:24px;">
+        <div class="review-quote reveal reveal--delay-1">
+          <p class="review-quote__text">"Montevideo me sorprendió. Tenía prejuicios sobre la arquitectura uruguaya y me fui completamente convencido de que es un patrimonio que el mundo no conoce suficientemente."</p>
+          <p class="review-quote__author">Martín F.</p>
+          <p class="review-quote__detail">Uruguay · Viajero</p>
+        </div>
+        <div class="review-quote reveal reveal--delay-2">
+          <p class="review-quote__text">"Las Misiones fueron lo más impresionante del viaje. Estar parado en esas ruinas en medio de la selva paraguaya y entender lo que fue ese proyecto... no tiene precio."</p>
+          <p class="review-quote__author">Valeria R.</p>
+          <p class="review-quote__detail">Paraguay · Viajera</p>
+        </div>
+        <div class="review-quote reveal reveal--delay-3">
+          <p class="review-quote__text">"El grupo fue lo mejor. Veinteañeros, cincuentones, arquitectos, diseñadores, médicos. Nadie se fue sin hacer al menos un amigo para toda la vida."</p>
+          <p class="review-quote__author">Diego H.</p>
+          <p class="review-quote__detail">Uruguay + Paraguay · Viajero</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ============================================================
        CTA FINAL
@@ -383,7 +389,7 @@
     <div class="container">
       <div class="footer__inner">
         <div class="footer__brand">
-          <img src="/assets/img/LogoBauhasaurusWordmark.png" alt="Bauhasaurus" class="footer__logo-img">
+          <img src="/assets/img/LogoBauhasaurusWordmark_green.png" alt="Bauhasaurus" class="footer__logo-img">
           <p class="footer__tagline">Expediciones de arquitectura en grupos pequeños.</p>
           <div class="footer__social">
             <a href="#" class="footer__social-link">IG</a>
