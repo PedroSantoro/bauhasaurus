@@ -2,12 +2,17 @@
 // BAUHASAURUS — Trip detail JS
 // ============================================================
 
+import logoGreen from '../assets/img/LogoBauhasaurusWordmark_green.png'
+import logoLightblue from '../assets/img/LogoBauhasaurusWordmark_lightblue.png'
+import logoRed from '../assets/img/LogoBauhasaurusWordmark_red.png'
+import logoPurple from '../assets/img/LogoBauhasaurusWordmark_purple.png'
+
 // ── Logo swap por tema de país ────────────────────────────────
 const THEME_LOGOS = {
-  'theme-br':   '/assets/img/LogoBauhasaurusWordmark_green.png',
-  'theme-uy':   '/assets/img/LogoBauhasaurusWordmark_lightblue.png',
-  'theme-py':   '/assets/img/LogoBauhasaurusWordmark_red.png',
-  'theme-uypy': '/assets/img/LogoBauhasaurusWordmark_purple.png',
+  'theme-br': logoGreen,
+  'theme-uy': logoLightblue,
+  'theme-py': logoRed,
+  'theme-uypy': logoPurple,
 }
 
 ;(function swapLogo() {
