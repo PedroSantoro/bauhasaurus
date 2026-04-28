@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Expediciones — Bauhasaurus</title>
-  <meta name="description" content="Todas las expediciones de arquitectura de Bauhasaurus. Uruguay, Paraguay, Brasil y más destinos." />
+  <meta name="description" content="Todas las expediciones de arquitectura de Bauhasaurus. Brasil, Uruguay, Paraguay y más destinos." />
   <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
   <link rel="stylesheet" href="/styles/main.css" />
 </head>
@@ -21,10 +21,15 @@
         <a href="/#mision" class="nav__link">Nosotros</a>
         <span class="nav__link nav__link--soon">Artículos</span>
         <span class="nav__link nav__link--soon">Actividades</span>
-        <span class="nav__link nav__link--soon">Shop</span>
       </div>
       <div class="nav__cta">
-        <a href="https://wa.me/XXXXXXXXXXX" target="_blank" rel="noopener" class="btn btn--outline btn--sm">WhatsApp</a>
+        <a href="https://wa.me/XXXXXXXXXXX" target="_blank" rel="noopener" class="btn btn--wa btn--sm nav__wa">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.55 4.116 1.516 5.849L.057 23.569a.5.5 0 00.611.637l5.872-1.539A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.81 9.81 0 01-5.032-1.383l-.36-.213-3.735.979.997-3.647-.234-.374A9.815 9.815 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/>
+          </svg>
+          WhatsApp
+        </a>
       </div>
       <button class="nav__hamburger" id="hamburger" aria-label="Menú">
         <span></span><span></span><span></span>
@@ -54,13 +59,37 @@
     </div>
   </div>
 
+  <!-- INTRO / EXPLAINER -->
+  <section class="expediciones-intro">
+    <div class="container">
+      <div class="expediciones-intro__inner">
+        <div class="expediciones-intro__text">
+          <p class="t-label text-accent" style="margin-bottom:16px;">Qué es una expedición</p>
+          <h2 class="t-display-md" style="margin-bottom:24px;">Viajamos para mirar<br>de otra forma<span class="text-accent">.</span></h2>
+          <p class="t-body-lg text-muted" style="margin-bottom:16px;">
+            Cada expedición es un recorrido curado por la arquitectura de un destino. Vamos en grupo pequeño, con un guía especializado, y dedicamos tiempo a leer las obras y la ciudad que las contiene.
+          </p>
+          <p class="t-body-lg text-muted" style="margin-bottom:16px;">
+            No es un tour. Es una forma de experimentar el espacio construido: caminamos los edificios, conversamos con quienes los habitan y pensamos colectivamente lo que vemos.
+          </p>
+          <p class="t-body-lg text-muted">
+            Las expediciones se pueden hacer completas o por tramos. Cada tramo se vende por separado y combina con los demás según el itinerario.
+          </p>
+        </div>
+        <div class="expediciones-intro__media">
+          <img src="/assets/img/grupoviajes.jpg" alt="Grupo en expedición Bauhasaurus" class="expediciones-intro__img">
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- BRASIL -->
   <section class="country-section country-section--brasil" style="background:var(--bg);">
     <div class="container">
       <div class="country-section__header">
         <div class="country-section__dot"></div>
         <span class="country-section__name">Brasil</span>
-        <span class="country-section__meta">Río de Janeiro · Brasilia · São Paulo</span>
+        <span class="country-section__meta">Río de Janeiro · Brasilia · São Paulo · Julio–Agosto 2026</span>
       </div>
       <div class="country-section__grid">
 
@@ -70,12 +99,11 @@
           <img src="/assets/img/BrasilCompletoCARD.jpg" alt="Brasil completo" class="trip-card__bg">
           <div class="trip-card__overlay"></div>
           <div class="trip-card__body">
-            <p class="trip-card__subtitle">15 días · USD 2.200</p>
+            <p class="trip-card__subtitle">15 días · desde USD 4.300</p>
             <h3 class="trip-card__title">Brasil<br>completo</h3>
             <p class="trip-card__desc">Río de Janeiro, Brasilia y São Paulo: los tres laboratorios donde Brasil convirtió la arquitectura en programa político y cultural.</p>
             <div class="trip-card__footer">
-              <span class="trip-card__dates-text">5 al 19 de septiembre de 2026</span>
-              <a href="https://wa.me/XXXXXXXXXXX?text=Hola%2C%20quiero%20consultar%20por%20la%20expedici%C3%B3n%20Brasil%20completo%20(5%20al%2019%20de%20septiembre%202026)" target="_blank" rel="noopener" class="btn btn--primary btn--sm trip-card__cta">Consultar</a>
+              <span class="trip-card__dates-text">23 de julio al 7 de agosto de 2026</span>
             </div>
           </div>
         </div>
@@ -86,12 +114,11 @@
           <img src="/assets/img/RioDeJaneiroCARD.jpg" alt="Río de Janeiro" class="trip-card__bg">
           <div class="trip-card__overlay"></div>
           <div class="trip-card__body">
-            <p class="trip-card__subtitle">Tramo · 5 días · consultar precio</p>
+            <p class="trip-card__subtitle">Tramo · 6 días · desde USD 1.580</p>
             <h3 class="trip-card__title">Río de<br>Janeiro</h3>
             <p class="trip-card__desc">Niemeyer, Reidy y la gestación del modernismo latinoamericano frente a la bahía de Guanabara.</p>
             <div class="trip-card__footer">
-              <span class="trip-card__dates-text">5 al 9 sep 2026</span>
-              <a href="https://wa.me/XXXXXXXXXXX?text=Hola%2C%20quiero%20consultar%20por%20el%20tramo%20R%C3%ADo%20de%20Janeiro%20(5%20al%209%20de%20septiembre%202026)" target="_blank" rel="noopener" class="btn btn--primary btn--sm trip-card__cta">Consultar</a>
+              <span class="trip-card__dates-text">23 al 28 jul 2026</span>
             </div>
           </div>
         </div>
@@ -102,12 +129,11 @@
           <img src="/assets/img/BrasiliaCARD.jpg" alt="Brasilia" class="trip-card__bg">
           <div class="trip-card__overlay"></div>
           <div class="trip-card__body">
-            <p class="trip-card__subtitle">Tramo · 4 días · consultar precio</p>
+            <p class="trip-card__subtitle">Tramo · 4 días · desde USD 1.360</p>
             <h3 class="trip-card__title">Brasilia</h3>
             <p class="trip-card__desc">La ciudad diseñada desde cero. Costa y Niemeyer construyeron en el cerrado la utopía moderna más radical del siglo XX.</p>
             <div class="trip-card__footer">
-              <span class="trip-card__dates-text">10 al 13 sep 2026</span>
-              <a href="https://wa.me/XXXXXXXXXXX?text=Hola%2C%20quiero%20consultar%20por%20el%20tramo%20Brasilia%20(10%20al%2013%20de%20septiembre%202026)" target="_blank" rel="noopener" class="btn btn--primary btn--sm trip-card__cta">Consultar</a>
+              <span class="trip-card__dates-text">29 jul al 1 ago 2026</span>
             </div>
           </div>
         </div>
@@ -118,12 +144,11 @@
           <img src="/assets/img/SaoPauloCARD.jpg" alt="São Paulo" class="trip-card__bg">
           <div class="trip-card__overlay"></div>
           <div class="trip-card__body">
-            <p class="trip-card__subtitle">Tramo · 6 días · consultar precio</p>
+            <p class="trip-card__subtitle">Tramo · 6 días · desde USD 1.620</p>
             <h3 class="trip-card__title">São Paulo</h3>
             <p class="trip-card__desc">El brutalismo paulista, el MASP de Lina Bo Bardi y la densidad cultural de la mayor metrópolis de América del Sur.</p>
             <div class="trip-card__footer">
-              <span class="trip-card__dates-text">14 al 19 sep 2026</span>
-              <a href="https://wa.me/XXXXXXXXXXX?text=Hola%2C%20quiero%20consultar%20por%20el%20tramo%20S%C3%A3o%20Paulo%20(14%20al%2019%20de%20septiembre%202026)" target="_blank" rel="noopener" class="btn btn--primary btn--sm trip-card__cta">Consultar</a>
+              <span class="trip-card__dates-text">2 al 7 ago 2026</span>
             </div>
           </div>
         </div>
@@ -132,85 +157,60 @@
     </div>
   </section>
 
-  <!-- URUGUAY + PARAGUAY -->
-  <section class="country-section country-section--combined" style="background:var(--bg);">
+  <!-- PRÓXIMAMENTE — Asunción y Montevideo (color, este año) -->
+  <section class="country-section country-section--upcoming" style="background:var(--bg);">
     <div class="container">
       <div class="country-section__header">
         <div class="country-section__dot"></div>
-        <span class="country-section__name">Uruguay + Paraguay</span>
-        <span class="country-section__meta">Expedición combinada · 13 días</span>
+        <span class="country-section__name">Próximamente · 2026</span>
+        <span class="country-section__meta">Montevideo · Asunción — anunciamos fechas pronto</span>
       </div>
-      <div class="country-section__grid country-section__grid--single">
+      <p class="t-body text-muted" style="max-width:640px; margin-bottom:32px;">
+        Estamos cerrando los detalles de las próximas expediciones a Montevideo y Asunción. Si te interesan, dejanos tu mensaje por WhatsApp y te avisamos apenas anunciemos fechas.
+      </p>
+      <div class="country-section__grid">
 
-        <div class="trip-card trip-card--full trip-card--uypy">
-          <a href="/viajes/uruguay-paraguay.html" class="trip-card__link-overlay" aria-label="Ver expedición Uruguay + Paraguay"></a>
+        <!-- Uruguay + Paraguay — combined -->
+        <div class="trip-card trip-card--full trip-card--upcoming trip-card--uypy">
           <img src="/assets/img/UruguayParaguayCARD.jpg" alt="Uruguay + Paraguay" class="trip-card__bg">
           <div class="trip-card__overlay"></div>
+          <span class="trip-card__upcoming-badge">Próximamente · 2026</span>
           <div class="trip-card__body">
-            <p class="trip-card__subtitle">13 días · USD 1.800</p>
+            <p class="trip-card__subtitle">Expedición combinada · 13 días</p>
             <h3 class="trip-card__title">Uruguay<br>+ Paraguay</h3>
             <p class="trip-card__desc">Montevideo y Asunción: dos ciudades donde la arquitectura del siglo XX definió una identidad propia, lejos de los grandes centros.</p>
             <div class="trip-card__footer">
-              <span class="trip-card__dates-text">10 al 22 de agosto de 2026</span>
-              <a href="https://wa.me/XXXXXXXXXXX?text=Hola%2C%20quiero%20consultar%20por%20la%20expedici%C3%B3n%20Uruguay%20%2B%20Paraguay%20(10%20al%2022%20de%20agosto%202026)" target="_blank" rel="noopener" class="btn btn--primary btn--sm trip-card__cta">Consultar</a>
+              <a href="https://wa.me/XXXXXXXXXXX?text=Hola%2C%20me%20interesa%20la%20expedici%C3%B3n%20Uruguay%20%2B%20Paraguay%2C%20avisenme%20cuando%20anuncien%20fechas" target="_blank" rel="noopener" class="btn btn--interest btn--sm trip-card__cta">Me interesa</a>
             </div>
           </div>
         </div>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- URUGUAY -->
-  <section class="country-section country-section--uruguay" style="background:var(--bg);">
-    <div class="container">
-      <div class="country-section__header">
-        <div class="country-section__dot"></div>
-        <span class="country-section__name">Uruguay</span>
-        <span class="country-section__meta">Montevideo · por tramo</span>
-      </div>
-      <div class="country-section__grid country-section__grid--single">
-
-        <div class="trip-card trip-card--full trip-card--uy">
-          <a href="/viajes/uruguay.html" class="trip-card__link-overlay" aria-label="Ver expedición Solo Uruguay"></a>
+        <!-- Solo Uruguay — Montevideo -->
+        <div class="trip-card trip-card--full trip-card--upcoming trip-card--uy">
           <img src="/assets/img/MontevideoCARD.jpg" alt="Montevideo" class="trip-card__bg">
           <div class="trip-card__overlay"></div>
+          <span class="trip-card__upcoming-badge">Próximamente · 2026</span>
           <div class="trip-card__body">
-            <p class="trip-card__subtitle">Tramo · 6 días · consultar precio</p>
+            <p class="trip-card__subtitle">Tramo Montevideo</p>
             <h3 class="trip-card__title">Solo<br>Uruguay</h3>
             <p class="trip-card__desc">Montevideo: racionalismo, art déco y modernismo en una escala íntima que invita a caminar y detenerse.</p>
             <div class="trip-card__footer">
-              <span class="trip-card__dates-text">10 al 15 de agosto de 2026</span>
-              <a href="https://wa.me/XXXXXXXXXXX?text=Hola%2C%20quiero%20consultar%20por%20el%20tramo%20Uruguay%20(10%20al%2015%20de%20agosto%202026)" target="_blank" rel="noopener" class="btn btn--primary btn--sm trip-card__cta">Consultar</a>
+              <a href="https://wa.me/XXXXXXXXXXX?text=Hola%2C%20me%20interesa%20la%20expedici%C3%B3n%20a%20Montevideo%2C%20avisenme%20cuando%20anuncien%20fechas" target="_blank" rel="noopener" class="btn btn--interest btn--sm trip-card__cta">Me interesa</a>
             </div>
           </div>
         </div>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- PARAGUAY -->
-  <section class="country-section country-section--paraguay" style="background:var(--bg);">
-    <div class="container">
-      <div class="country-section__header">
-        <div class="country-section__dot"></div>
-        <span class="country-section__name">Paraguay</span>
-        <span class="country-section__meta">Asunción · por tramo</span>
-      </div>
-      <div class="country-section__grid country-section__grid--single">
-
-        <div class="trip-card trip-card--full trip-card--py">
-          <a href="/viajes/paraguay.html" class="trip-card__link-overlay" aria-label="Ver expedición Solo Paraguay"></a>
+        <!-- Solo Paraguay — Asunción -->
+        <div class="trip-card trip-card--full trip-card--upcoming trip-card--py">
           <img src="/assets/img/AsuncionCARD.jpg" alt="Asunción" class="trip-card__bg">
           <div class="trip-card__overlay"></div>
+          <span class="trip-card__upcoming-badge">Próximamente · 2026</span>
           <div class="trip-card__body">
-            <p class="trip-card__subtitle">Tramo · 7 días · consultar precio</p>
+            <p class="trip-card__subtitle">Tramo Asunción</p>
             <h3 class="trip-card__title">Solo<br>Paraguay</h3>
             <p class="trip-card__desc">Asunción: arquitectura colonial, eclecticismo y algunas de las obras más singulares del continente.</p>
             <div class="trip-card__footer">
-              <span class="trip-card__dates-text">16 al 22 de agosto de 2026</span>
-              <a href="https://wa.me/XXXXXXXXXXX?text=Hola%2C%20quiero%20consultar%20por%20el%20tramo%20Paraguay%20(16%20al%2022%20de%20agosto%202026)" target="_blank" rel="noopener" class="btn btn--primary btn--sm trip-card__cta">Consultar</a>
+              <a href="https://wa.me/XXXXXXXXXXX?text=Hola%2C%20me%20interesa%20la%20expedici%C3%B3n%20a%20Asunci%C3%B3n%2C%20avisenme%20cuando%20anuncien%20fechas" target="_blank" rel="noopener" class="btn btn--interest btn--sm trip-card__cta">Me interesa</a>
             </div>
           </div>
         </div>
@@ -219,13 +219,13 @@
     </div>
   </section>
 
-  <!-- PRÓXIMAMENTE -->
+  <!-- PRÓXIMAMENTE 2027 -->
   <section class="country-section country-section--soon" style="background:var(--bg);">
     <div class="container">
       <div class="country-section__header">
         <div class="country-section__dot"></div>
-        <span class="country-section__name">Próximamente</span>
-        <span class="country-section__meta">2027</span>
+        <span class="country-section__name">Próximamente · 2027</span>
+        <span class="country-section__meta">Nuevos destinos en preparación</span>
       </div>
       <div class="country-section__grid">
 
@@ -269,7 +269,11 @@
       <p class="t-body text-muted" style="max-width:440px;margin-inline:auto;margin-bottom:32px;">
         Si tenés preguntas sobre destinos, fechas, precios o querés armar algo a medida, escribinos.
       </p>
-      <a href="https://wa.me/XXXXXXXXXXX" target="_blank" rel="noopener" class="btn btn--primary btn--lg">
+      <a href="https://wa.me/XXXXXXXXXXX" target="_blank" rel="noopener" class="btn btn--wa btn--lg">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+          <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.55 4.116 1.516 5.849L.057 23.569a.5.5 0 00.611.637l5.872-1.539A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.81 9.81 0 01-5.032-1.383l-.36-.213-3.735.979.997-3.647-.234-.374A9.815 9.815 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/>
+        </svg>
         Escribir por WhatsApp
       </a>
     </div>
@@ -290,8 +294,10 @@
         <div>
           <p class="footer__col-title">Expediciones</p>
           <div class="footer__links">
-            <a href="/viajes/uruguay-paraguay.html" class="footer__link">Uruguay + Paraguay</a>
             <a href="/viajes/brasil.html" class="footer__link">Brasil</a>
+            <a href="/viajes/brasil-rio.html" class="footer__link">Río de Janeiro</a>
+            <a href="/viajes/brasil-brasilia.html" class="footer__link">Brasilia</a>
+            <a href="/viajes/brasil-saopaulo.html" class="footer__link">São Paulo</a>
           </div>
         </div>
         <div>
@@ -304,7 +310,6 @@
       </div>
       <div class="footer__bottom">
         <p class="footer__copy">© 2026 Bauhasaurus.</p>
-        <a href="#" class="footer__mestiza">Mestiza Estudio →</a>
       </div>
     </div>
   </footer>

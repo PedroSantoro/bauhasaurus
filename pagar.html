@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reservá tu lugar — Bauhasaurus</title>
+  <meta name="description" content="Reservá tu lugar en una expedición de arquitectura Bauhasaurus. Aplicá tu promocode y elegí tu forma de pago." />
+  <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
+  <link rel="stylesheet" href="/styles/main.css" />
+</head>
+<body class="theme-br">
+
+  <!-- NAV -->
+  <nav class="nav scrolled" id="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo">
+        <img src="/assets/img/LogoBauhasaurusWordmark_green.png" alt="Bauhasaurus" class="nav__logo-img">
+      </a>
+      <div class="nav__links">
+        <a href="/viajes.html" class="nav__link">Expediciones</a>
+        <a href="/#mision" class="nav__link">Nosotros</a>
+        <span class="nav__link nav__link--soon">Artículos</span>
+        <span class="nav__link nav__link--soon">Actividades</span>
+      </div>
+      <div class="nav__cta">
+        <a href="https://wa.me/XXXXXXXXXXX?text=Hola%2C%20tengo%20una%20consulta%20sobre%20el%20pago" target="_blank" rel="noopener" class="btn btn--wa btn--sm">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.55 4.116 1.516 5.849L.057 23.569a.5.5 0 00.611.637l5.872-1.539A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.81 9.81 0 01-5.032-1.383l-.36-.213-3.735.979.997-3.647-.234-.374A9.815 9.815 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/>
+          </svg>
+          Consultar
+        </a>
+      </div>
+      <button class="nav__hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="nav__mobile" id="mobileMenu">
+    <button class="nav__hamburger" id="hamburgerClose" style="position:absolute;top:20px;right:24px">
+      <span style="transform:rotate(45deg) translate(5px,5px)"></span>
+      <span style="opacity:0"></span>
+      <span style="transform:rotate(-45deg) translate(5px,-5px)"></span>
+    </button>
+    <a href="/viajes.html" class="nav__link t-display-sm">Expediciones</a>
+    <a href="/#mision" class="nav__link t-display-sm">Nosotros</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="container">
+      <p class="t-label text-accent" style="margin-bottom:16px;">Reservá tu lugar</p>
+      <h1 class="t-display-lg" style="margin-bottom:20px;">Checkout<span class="text-accent">.</span></h1>
+      <p class="t-body-lg text-muted" style="max-width:560px;">
+        Elegí tu tramo, modalidad y forma de pago. Aplicá tu promocode si tenés uno y completá la reserva con tarjeta, transferencia, efectivo o cripto.
+      </p>
+    </div>
+  </div>
+
+  <!-- CHECKOUT -->
+  <section class="section--sm" style="background:var(--bg);">
+    <div class="container">
+      <div class="checkout">
+
+        <!-- Form column -->
+        <div class="checkout__form">
+
+          <!-- Tramo -->
+          <div class="checkout__group">
+            <label class="checkout__label">1. Elegí tu expedición</label>
+            <div class="checkout__radios" id="tripGroup">
+              <label class="checkout__radio">
+                <input type="radio" name="trip" value="brasil-rio" data-single="1850" data-doble="1580">
+                <span class="checkout__radio-body">
+                  <strong>Tramo Río de Janeiro</strong>
+                  <small>23/07 — 28/07/2026 · Single USD 1.850 · Doble USD 1.580</small>
+                </span>
+              </label>
+              <label class="checkout__radio">
+                <input type="radio" name="trip" value="brasil-brasilia" data-single="1460" data-doble="1360">
+                <span class="checkout__radio-body">
+                  <strong>Tramo Brasilia</strong>
+                  <small>29/07 — 01/08/2026 · Single USD 1.460 · Doble USD 1.360</small>
+                </span>
+              </label>
+              <label class="checkout__radio">
+                <input type="radio" name="trip" value="brasil-saopaulo" data-single="1860" data-doble="1620">
+                <span class="checkout__radio-body">
+                  <strong>Tramo São Paulo</strong>
+                  <small>02/08 — 07/08/2026 · Single USD 1.860 · Doble USD 1.620</small>
+                </span>
+              </label>
+              <label class="checkout__radio">
+                <input type="radio" name="trip" value="brasil-completo" data-single="5170" data-doble="4560">
+                <span class="checkout__radio-body">
+                  <strong>Brasil completo (los tres tramos)</strong>
+                  <small>23/07 — 07/08/2026 · Single USD 5.170 · Doble USD 4.560</small>
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Modalidad -->
+          <div class="checkout__group">
+            <label class="checkout__label">2. Modalidad de habitación</label>
+            <div class="checkout__radios checkout__radios--inline" id="roomGroup">
+              <label class="checkout__radio checkout__radio--inline">
+                <input type="radio" name="room" value="doble" checked>
+                <span><strong>Doble</strong><small>Compartida</small></span>
+              </label>
+              <label class="checkout__radio checkout__radio--inline">
+                <input type="radio" name="room" value="single">
+                <span><strong>Single</strong><small>Individual</small></span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Forma de pago -->
+          <div class="checkout__group">
+            <label class="checkout__label">3. Forma de pago</label>
+            <div class="checkout__radios" id="paymentGroup">
+              <label class="checkout__radio">
+                <input type="radio" name="payment" value="card" checked>
+                <span class="checkout__radio-body">
+                  <strong>Tarjeta de crédito</strong>
+                  <small>1 pago o financiado en 3 cuotas (50% + 25% + 25%)</small>
+                </span>
+              </label>
+              <label class="checkout__radio">
+                <input type="radio" name="payment" value="transfer">
+                <span class="checkout__radio-body">
+                  <strong>Transferencia o efectivo</strong>
+                  <small>Sin recargo. Te enviamos los datos bancarios al confirmar.</small>
+                </span>
+              </label>
+              <label class="checkout__radio checkout__radio--highlight">
+                <input type="radio" name="payment" value="crypto">
+                <span class="checkout__radio-body">
+                  <strong>Cripto <span class="checkout__pill">3% OFF</span></strong>
+                  <small>USDT, USDC, BTC o ETH. Descuento aplicado automáticamente.</small>
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Promocode -->
+          <div class="checkout__group">
+            <label class="checkout__label" for="promocode">4. Promocode</label>
+            <p class="checkout__help">
+              Descuentos disponibles: <strong>USD 50</strong> si ya viajaste con Bauhasaurus, y <strong>USD 50</strong> al sumar un segundo tramo. Podés aplicar más de un código.
+            </p>
+            <div class="checkout__promo">
+              <input type="text" id="promocode" placeholder="Ej: EXVIAJANTE, SEGUNDOTRAMO" autocomplete="off">
+              <button type="button" class="btn btn--outline btn--sm" id="applyPromo">Aplicar</button>
+            </div>
+            <div class="checkout__promo-list" id="promoList"></div>
+          </div>
+
+          <!-- Datos personales -->
+          <div class="checkout__group">
+            <label class="checkout__label">5. Tus datos</label>
+            <div class="checkout__fields">
+              <input type="text" placeholder="Nombre y apellido" autocomplete="name">
+              <input type="email" placeholder="Email" autocomplete="email">
+              <input type="tel" placeholder="Teléfono / WhatsApp" autocomplete="tel">
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Summary column -->
+        <aside class="checkout__summary">
+          <p class="t-label text-accent" style="margin-bottom:12px;">Resumen</p>
+          <h3 class="t-display-sm" id="summaryTitle">Elegí tu expedición</h3>
+          <p class="text-muted" style="font-size:13px;margin-top:4px;" id="summaryDates">—</p>
+
+          <div class="checkout__summary-rows">
+            <div class="checkout__row"><span>Subtotal</span><span id="rowSubtotal">USD 0</span></div>
+            <div class="checkout__row checkout__row--discount" id="rowPromoLine" hidden><span id="rowPromoLabel">Promocodes</span><span id="rowPromo">– USD 0</span></div>
+            <div class="checkout__row checkout__row--discount" id="rowCryptoLine" hidden><span>Descuento cripto (3%)</span><span id="rowCrypto">– USD 0</span></div>
+            <div class="checkout__row checkout__row--total"><span>Total</span><span id="rowTotal">USD 0</span></div>
+          </div>
+
+          <button type="button" class="btn btn--pay btn--lg checkout__pay" id="payBtn" disabled>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="6" width="20" height="14" rx="2"/><line x1="2" y1="11" x2="22" y2="11"/>
+            </svg>
+            <span>Pagar y reservar</span>
+          </button>
+
+          <p class="checkout__legal">
+            Al continuar, aceptás los términos de reserva. El pago se procesa de forma segura mediante Stripe (tarjeta) o coordinado con nuestro equipo (transferencia, efectivo o cripto). Cualquier consulta, escribinos por WhatsApp.
+          </p>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <img src="/assets/img/LogoBauhasaurusWordmark_green.png" alt="Bauhasaurus" class="footer__logo-img">
+          <p class="footer__tagline">Expediciones de arquitectura en grupos pequeños.</p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link">IG</a>
+            <a href="#" class="footer__social-link">WA</a>
+          </div>
+        </div>
+        <div>
+          <p class="footer__col-title">Expediciones</p>
+          <div class="footer__links">
+            <a href="/viajes/brasil.html" class="footer__link">Brasil completo</a>
+            <a href="/viajes/brasil-rio.html" class="footer__link">Río de Janeiro</a>
+            <a href="/viajes/brasil-brasilia.html" class="footer__link">Brasilia</a>
+            <a href="/viajes/brasil-saopaulo.html" class="footer__link">São Paulo</a>
+          </div>
+        </div>
+        <div>
+          <p class="footer__col-title">Contacto</p>
+          <div class="footer__links">
+            <a href="https://wa.me/XXXXXXXXXXX" target="_blank" rel="noopener" class="footer__link">WhatsApp Info</a>
+            <a href="https://wa.me/XXXXXXXXXXX" target="_blank" rel="noopener" class="footer__link">WhatsApp Reservas</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2026 Bauhasaurus.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/scripts/pagar.js"></script>
+</body>
+</html>
