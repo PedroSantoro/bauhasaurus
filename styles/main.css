@@ -1774,6 +1774,29 @@ ul, ol { list-style: none; }
   line-height: 1.7;
 }
 
+/* FAQ */
+.faq-accordion {
+  border-top: 1px solid var(--border);
+}
+
+.faq-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.faq-qa {
+  max-width: 680px;
+}
+
+.faq-question {
+  margin-bottom: 4px;
+  color: var(--text);
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
 /* ── Price cards ──────────────────────────────────────────── */
 .prices-grid {
   display: grid;
@@ -2147,6 +2170,14 @@ ul, ol { list-style: none; }
   }
   .trip-card--feature {
     grid-column: span 1;
+  }
+  .accordion-btn__left {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .accordion-body__inner {
+    padding-left: 0;
   }
 }
 
