@@ -10,6 +10,7 @@ export default defineConfig({
       input: {
         main: 'index.html',
         viajes: 'viajes.html',
+        pagar: 'pagar.html',
         'viajes-uy-py': 'viajes/uruguay-paraguay.html',
         'viajes-brasil': 'viajes/brasil.html',
         'viajes-uruguay': 'viajes/uruguay.html',
