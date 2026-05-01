@@ -36,8 +36,8 @@ export const trips = [
       { id: 'uruguay', label: 'Solo Uruguay', discount: 0 },
       { id: 'paraguay', label: 'Solo Paraguay', discount: 0 },
     ],
-    whatsappTravel: 'https://wa.me/XXXXXXXXXXX',
-    whatsappInfo: 'https://wa.me/XXXXXXXXXXX',
+    whatsappTravel: 'https://wa.me/5491163753879',
+    whatsappInfo: 'https://wa.me/5491163753879',
     filter: ['todos', 'uruguay-paraguay'],
     itinerary: [
       {
@@ -137,8 +137,8 @@ export const trips = [
       { id: 'brasilia', label: 'Solo Brasilia', discount: 0 },
       { id: 'sao-paulo', label: 'Solo São Paulo', discount: 0 },
     ],
-    whatsappTravel: 'https://wa.me/XXXXXXXXXXX',
-    whatsappInfo: 'https://wa.me/XXXXXXXXXXX',
+    whatsappTravel: 'https://wa.me/5491163753879',
+    whatsappInfo: 'https://wa.me/5491163753879',
     filter: ['todos', 'brasil'],
     itinerary: [
       {

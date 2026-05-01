@@ -51,6 +51,12 @@
   --accent-py-dark: #B81E1E;
   --accent-uypy:    #8B5CF6;   /* Uruguay+Paraguay — purple           */
   --accent-uypy-dark: #6D28D9;
+  --accent-mx:      #2E7D32;   /* México           — verde oscuro     */
+  --accent-mx-dark: #1B5E20;
+  --accent-chi:     #1E65B5;   /* Chicago/USA      — azul             */
+  --accent-chi-dark: #1148A0;
+  --accent-tk:      #BC002D;   /* Tokio/Japón      — rojo Japan       */
+  --accent-tk-dark: #8C001F;
 
   /* Typography */
   --font-display: 'NeueMontreal', sans-serif;
@@ -667,11 +673,56 @@ ul, ol { list-style: none; }
   color: var(--text);
 }
 
+.trip-card__tagline {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-style: italic;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.3;
+  margin-top: 4px;
+}
+
 .trip-card__footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 8px;
+}
+
+/* Day photo strip inside accordion */
+.day-photos {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  margin: 20px 0 8px;
+  padding-bottom: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+.day-photos::-webkit-scrollbar { height: 4px; }
+.day-photos::-webkit-scrollbar-track { background: transparent; }
+.day-photos::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+.day-photo {
+  flex-shrink: 0;
+  width: 220px;
+  height: 130px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--surface);
+}
+.day-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.day-photo:hover img { transform: scale(1.04); }
+
+.day-photo__caption {
+  display: none;
 }
 
 .trip-card__leader {
@@ -733,6 +784,15 @@ ul, ol { list-style: none; }
 .trip-card__placeholder--py {
   background: linear-gradient(145deg, #2A0C1A 0%, #1A0C0C 40%, #1A1A0C 100%);
 }
+.trip-card__placeholder--mx {
+  background: linear-gradient(145deg, #1A1A2C 0%, #0C0C1A 40%, #1A0C2C 100%);
+}
+.trip-card__placeholder--chi {
+  background: linear-gradient(145deg, #0C1A2C 0%, #0C0C1A 40%, #1A1A2C 100%);
+}
+.trip-card__placeholder--tk {
+  background: linear-gradient(145deg, #2C0C0C 0%, #1A0C0C 40%, #2C1A0C 100%);
+}
 .trip-card__placeholder::after {
   content: '';
   position: absolute;
@@ -770,6 +830,21 @@ ul, ol { list-style: none; }
 .trip-card--uypy .trip-card__date-badge { border-color: rgba(139, 92, 246, 0.4); }
 .trip-card--uypy .trip-card__status--available { background: var(--accent-uypy); color: #fff; }
 .trip-card--uypy .trip-card__status--available:hover { background: var(--accent-uypy-dark); }
+
+.trip-card--mx .trip-card__subtitle     { color: var(--accent-mx); }
+.trip-card--mx .trip-card__date-badge   { border-color: rgba(46, 125, 50, 0.4); }
+.trip-card--mx .trip-card__upcoming-badge { border-color: rgba(46, 125, 50, 0.4); color: var(--accent-mx); }
+.trip-card--mx .btn--interest           { border-color: var(--accent-mx); color: var(--accent-mx); }
+
+.trip-card--chi .trip-card__subtitle    { color: var(--accent-chi); }
+.trip-card--chi .trip-card__date-badge  { border-color: rgba(30, 101, 181, 0.4); }
+.trip-card--chi .trip-card__upcoming-badge { border-color: rgba(30, 101, 181, 0.4); color: var(--accent-chi); }
+.trip-card--chi .btn--interest          { border-color: var(--accent-chi); color: var(--accent-chi); }
+
+.trip-card--tk .trip-card__subtitle     { color: var(--accent-tk); }
+.trip-card--tk .trip-card__date-badge   { border-color: rgba(188, 0, 45, 0.4); }
+.trip-card--tk .trip-card__upcoming-badge { border-color: rgba(188, 0, 45, 0.4); color: var(--accent-tk); }
+.trip-card--tk .btn--interest           { border-color: var(--accent-tk); color: var(--accent-tk); }
 
 /* ── Page-level themes (single trip pages) ───────────────────
    Sobreescribe --accent en toda la página → todos los botones,
@@ -993,6 +1068,15 @@ ul, ol { list-style: none; }
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
+}
+
+.coming-soon__grid--five {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.coming-soon__grid .trip-card {
+  height: 280px;
+  border-radius: var(--radius-card);
 }
 
 .soon-card {
@@ -2080,6 +2164,7 @@ ul, ol { list-style: none; }
 .reveal--delay-2 { transition-delay: 0.2s; }
 .reveal--delay-3 { transition-delay: 0.3s; }
 .reveal--delay-4 { transition-delay: 0.4s; }
+.reveal--delay-5 { transition-delay: 0.5s; }
 
 /* ============================================================
    18. RESPONSIVE
@@ -2088,6 +2173,9 @@ ul, ol { list-style: none; }
 @media (max-width: 1024px) {
   .coming-soon__grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .coming-soon__grid--five {
+    grid-template-columns: repeat(3, 1fr);
   }
   .mision__inner {
     grid-template-columns: 1fr;
@@ -2132,6 +2220,9 @@ ul, ol { list-style: none; }
 
   .coming-soon__grid {
     grid-template-columns: 1fr 1fr;
+  }
+  .coming-soon__grid--five {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .carousel__arrow--prev { left: -12px; }
