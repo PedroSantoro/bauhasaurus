@@ -144,3 +144,15 @@ const revealObserver = new IntersectionObserver(
 )
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el))
+
+// ── Photo reel ───────────────────────────────────────────────
+document.querySelectorAll('.photo-reel').forEach(reel => {
+  const slides = reel.querySelectorAll('.photo-reel__slide')
+  if (slides.length < 2) return
+  let current = 0
+  setInterval(() => {
+    slides[current].classList.remove('photo-reel__slide--active')
+    current = (current + 1) % slides.length
+    slides[current].classList.add('photo-reel__slide--active')
+  }, 3500)
+})
