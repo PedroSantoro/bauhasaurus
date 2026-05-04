@@ -156,23 +156,26 @@ if (typewriterEl) {
   function tick() {
     const word = words[wordIndex]
     if (!erasing) {
-      typewriterEl.textContent = word.slice(0, charIndex + 1)
       charIndex++
+      const partial = word.slice(0, charIndex)
       if (charIndex === word.length) {
+        typewriterEl.innerHTML = partial + '<span class="text-accent">.</span>'
         erasing = true
         setTimeout(tick, 2000)
         return
       }
+      typewriterEl.textContent = partial
       setTimeout(tick, 80)
     } else {
-      typewriterEl.textContent = word.slice(0, charIndex - 1)
       charIndex--
       if (charIndex === 0) {
+        typewriterEl.textContent = ''
         erasing = false
         wordIndex = (wordIndex + 1) % words.length
         setTimeout(tick, 350)
         return
       }
+      typewriterEl.textContent = word.slice(0, charIndex)
       setTimeout(tick, 45)
     }
   }
