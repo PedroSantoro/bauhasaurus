@@ -1657,11 +1657,12 @@ ul, ol { list-style: none; }
 
 .trip-hero {
   position: relative;
-  height: calc(100vh - var(--nav-h) - var(--marquee-h));
+  height: 100vh;
   min-height: 520px;
   display: flex;
   align-items: flex-end;
   overflow: hidden;
+  padding-top: var(--nav-h);
 }
 
 .trip-hero__bg {
