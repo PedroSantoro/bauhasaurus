@@ -145,6 +145,41 @@ const revealObserver = new IntersectionObserver(
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el))
 
+// ── Hero typewriter ──────────────────────────────────────────
+const typewriterEl = document.getElementById('heroTypewriter')
+if (typewriterEl) {
+  const words = ['juntos', 'en comunidad', 'arquitectura y ciudad']
+  let wordIndex = 0
+  let charIndex = 0
+  let erasing = false
+
+  function tick() {
+    const word = words[wordIndex]
+    if (!erasing) {
+      typewriterEl.textContent = word.slice(0, charIndex + 1)
+      charIndex++
+      if (charIndex === word.length) {
+        erasing = true
+        setTimeout(tick, 2000)
+        return
+      }
+      setTimeout(tick, 80)
+    } else {
+      typewriterEl.textContent = word.slice(0, charIndex - 1)
+      charIndex--
+      if (charIndex === 0) {
+        erasing = false
+        wordIndex = (wordIndex + 1) % words.length
+        setTimeout(tick, 350)
+        return
+      }
+      setTimeout(tick, 45)
+    }
+  }
+
+  setTimeout(tick, 1400)
+}
+
 // ── Photo reel ───────────────────────────────────────────────
 document.querySelectorAll('.photo-reel').forEach(reel => {
   const slides = reel.querySelectorAll('.photo-reel__slide')

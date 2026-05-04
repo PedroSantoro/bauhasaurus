@@ -537,6 +537,18 @@ ul, ol { list-style: none; }
   animation: heroFadeUp 0.8s ease 0.5s both;
 }
 
+.hero__cursor {
+  display: inline-block;
+  margin-left: 2px;
+  color: var(--accent);
+  animation: cursor-blink 0.75s step-start infinite;
+}
+
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
 .hero__subtitle {
   max-width: 520px;
   margin-bottom: 40px;
