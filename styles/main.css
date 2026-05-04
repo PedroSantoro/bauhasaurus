@@ -362,6 +362,7 @@ ul, ol { list-style: none; }
   flex-direction: column;
   gap: 5px;
   padding: 8px;
+  margin-left: auto;
 }
 .nav__hamburger span {
   display: block;
@@ -2250,6 +2251,19 @@ ul, ol { list-style: none; }
     flex-direction: column;
     align-items: flex-start;
   }
+
+  .trip-section {
+    padding-block: 40px;
+  }
+
+  .trip-hero__content {
+    padding-bottom: 32px;
+  }
+
+  .trip-hero__badge {
+    padding: 6px 12px;
+    font-size: 11px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -2278,6 +2292,11 @@ ul, ol { list-style: none; }
   }
   .coming-soon__grid {
     grid-template-columns: 1fr;
+  }
+  .coming-soon__grid .trip-card {
+    width: 100%;
+    height: 220px;
+    aspect-ratio: unset;
   }
   .hero__actions {
     flex-direction: column;
