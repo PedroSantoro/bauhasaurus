@@ -171,6 +171,10 @@ const BRASIL_FAQ = [
         question: '¿Qué comidas están incluidas?',
         answer: 'Desayunos y cena de bienvenida. Almuerzos y cenas personales no están incluidos.',
       },
+      {
+        question: '¿Viajo solo/a pero quiero compartir habitación para pagar base doble?',
+        answer: 'No hay problema. Intentamos asignarte otra persona del grupo del mismo género y, de ser posible, de edad similar. Solo avisanos al momento de la inscripción y lo coordinamos. Esta asignación está sujeta a disponibilidad. En caso de abonar la seña bajo esta modalidad y no encontrarse una persona disponible para compartir, se aplicará la tarifa base single, abonando la diferencia correspondiente antes del inicio del tramo.',
+      },
     ],
   },
   {
